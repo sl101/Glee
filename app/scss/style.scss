@@ -3,7 +3,121 @@
 @import 'reset';
 @import 'global';
 
+.header {
+	padding: 50px 0 45px;
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
 
+.menu {
+	margin: 0 auto;
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		transform: translate(75px, 0px);
+	}
+	&__item:not(:last-child) {
+		margin-right: 35px;
+	}
+	&__link {
+		@extend %rubik-500;
+		font-size: 15px;
+		line-height: 1;
+		color: $header-black;
+		transition: all 0.5s;
+	}
+	&__link:hover {
+		color: $title;
+	}
+}
+
+.menu__sublink {
+}
+
+.user-nav {
+	display: flex;
+	align-items: center;
+		&__item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 52px;
+			width: 100%;
+			min-height: 52px;
+			position: relative;
+		}
+		&__item--search {
+			border-radius: 50%;
+			padding: 0 18px;
+			background-color: #edf1f4;
+			margin-right: 21px;
+		}
+		&__choise {
+			max-width: 178px;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border-radius: 89px;
+			padding: 0 42px;
+			background-color: $header-page;
+		}
+		&__decor {
+			max-width: 1px;
+			width: 100%;
+			height: 32px;
+			background-color: #ffffff;
+		}
+		&__item--heart {
+			margin-right: 30px;
+		}
+		&__item--cart {
+			margin-left: 30px;
+		}
+		&__num {
+			width: 16px;
+			height: 16px;
+			border-radius: 50%;
+			text-align: center;
+			font-size: 10px;
+			line-height: 1.6;
+			font-weight: 400;
+			position: absolute;
+			top: 10px;
+			right:-10px;
+			color: $title;
+			background-color: #ffffff;
+		}
+		&__item--button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			padding: 0 16px;
+			border: none;
+			cursor: pointer;
+			background-color: $header-button;
+			margin-left: 18px;
+			transition: background-color 0.5s;
+		}
+		&__item--button:hover {
+			background-color: $title;
+		}
+}
+
+.user-nav__link {
+
+}
+
+.user-nav__img {
+}
+
+.user-nav__num {
+}
 
 
 
