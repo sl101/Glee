@@ -1,6 +1,6 @@
-@import 'vars';
-@import 'fonts';
 @import 'reset';
+@import 'fonts';
+@import 'vars';
 @import 'global';
 
 .header {
@@ -55,6 +55,10 @@
 			padding: 0 18px;
 			background-color: #edf1f4;
 			margin-right: 21px;
+			transition: background-color 0.5s ;
+		}
+		&__item--search:hover {
+			// background-color: $title;
 		}
 		&__choise {
 			max-width: 178px;
