@@ -4,7 +4,7 @@
 @import 'global';
 
 .header {
-	padding: 50px 0 45px;
+	padding: 47px 0 45px;
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
@@ -27,11 +27,14 @@
 		@extend %rubik-500;
 		font-size: 15px;
 		line-height: 1;
+		padding-bottom: 8px;
+		border-bottom: 1px solid transparent;
 		color: $header-black;
-		transition: all 0.5s;
+		transition: border-color 0.5s, color 0.5s;
 	}
 	&__link:hover {
 		color: $title;
+		border-color: $title;
 	}
 }
 
@@ -45,42 +48,54 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			max-width: 52px;
-			width: 100%;
-			min-height: 52px;
+			width: 52px;
+			height: 52px;
 			position: relative;
+		}
+			&_img {
+			max-width: 100%;
+			max-height: 100%;
+			transition: fill 0.5s ;
 		}
 		&__item--search {
 			border-radius: 50%;
-			padding: 0 18px;
 			background-color: #edf1f4;
 			margin-right: 21px;
 			transition: background-color 0.5s ;
 		}
 		&__item--search:hover {
-			// background-color: $title;
+			background-color: $title;
 		}
-		&__choise {
-			max-width: 178px;
-			width: 100%;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			border-radius: 89px;
-			padding: 0 42px;
-			background-color: $header-page;
-		}
-		&__decor {
-			max-width: 1px;
-			width: 100%;
-			height: 32px;
-			background-color: #ffffff;
+		&__img:hover path{
+			fill: #ffffff;
+			background-color: $title;
 		}
 		&__item--heart {
-			margin-right: 30px;
+			width: 90px;
+			border-radius: 45px 0 0 45px;
+			background-color: $header-page;
+			position: relative;
+			transition: background-color 0.5s ;
+		}
+		&__item--heart:hover {
+			background-color: $title;
+		}
+		&__decor {
+			width: 1px;
+			height: 32px;
+			position: absolute;
+			right: 0;
+			background-color: #ffffff;
 		}
 		&__item--cart {
-			margin-left: 30px;
+			width: 90px;
+			border-radius: 0 45px 45px 0;
+			background-color: $header-page;
+			position: relative;
+			transition: background-color 0.5s ;
+		}
+		&__item--cart:hover {
+			background-color: $title;
 		}
 		&__num {
 			width: 16px;
@@ -91,9 +106,12 @@
 			line-height: 1.6;
 			position: absolute;
 			top: 10px;
-			right:-10px;
+			right: 25px;
 			color: $title;
 			background-color: #ffffff;
+		}
+		&__choise:hover {
+			background-color: $title;
 		}
 		&__item--button {
 			display: flex;
