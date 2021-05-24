@@ -23,18 +23,18 @@
 	&__item:not(:last-child) {
 		margin-right: 35px;
 	}
+	&__link.menu__item--active {
+		color: $title;
+	}
 	&__link {
 		@extend %rubik-500;
 		font-size: 15px;
 		line-height: 1;
-		padding-bottom: 8px;
-		border-bottom: 1px solid transparent;
-		color: $header-black;
+		color: $header-menu;
 		transition: border-color 0.5s, color 0.5s;
 	}
 	&__link:hover {
 		color: $title;
-		border-color: $title;
 	}
 }
 
@@ -52,33 +52,33 @@
 			height: 52px;
 			position: relative;
 		}
-			&_img {
+		&_img {
 			max-width: 100%;
 			max-height: 100%;
 			transition: fill 0.5s ;
 		}
 		&__item--search {
 			border-radius: 50%;
-			background-color: #edf1f4;
+			background-color: $header-icon;
 			margin-right: 21px;
 			transition: background-color 0.5s ;
 		}
-		&__item--search:hover {
-			background-color: $title;
-		}
-		&__img:hover path{
-			fill: #ffffff;
-			background-color: $title;
-		}
+		// &__item--search:hover.user-nav__img:hover path{
+		// 	background-color: $header-hover;
+		// }
+		// &__img:hover path{
+		// 	fill: #ffffff;
+		// 	background-color: $header-hover;
+		// }
 		&__item--heart {
 			width: 90px;
 			border-radius: 45px 0 0 45px;
-			background-color: $header-page;
+			background-color: $header-pink;
 			position: relative;
 			transition: background-color 0.5s ;
 		}
 		&__item--heart:hover {
-			background-color: $title;
+			// background-color: #f1a96a;
 		}
 		&__decor {
 			width: 1px;
@@ -90,12 +90,12 @@
 		&__item--cart {
 			width: 90px;
 			border-radius: 0 45px 45px 0;
-			background-color: $header-page;
+			background-color: $header-pink;
 			position: relative;
 			transition: background-color 0.5s ;
 		}
 		&__item--cart:hover {
-			background-color: $title;
+			// background-color: #f1a96a;
 		}
 		&__num {
 			width: 16px;
@@ -110,9 +110,6 @@
 			color: $title;
 			background-color: #ffffff;
 		}
-		&__choise:hover {
-			background-color: $title;
-		}
 		&__item--button {
 			display: flex;
 			align-items: center;
@@ -121,14 +118,19 @@
 			padding: 0 16px;
 			border: none;
 			cursor: pointer;
-			background-color: $header-button;
+			background-color: $header-icon;
 			margin-left: 18px;
 			transition: background-color 0.5s;
 		}
+		&__item:hover .user-nav__img path{
+			fill: #ffffff;
+		}
+		&__item--search:hover,
 		&__item--button:hover {
-			background-color: $title;
+			background-color: $header-hover;
 		}
 }
+
 
 .user-nav__link {
 
