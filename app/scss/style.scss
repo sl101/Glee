@@ -18,10 +18,10 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		transform: translate(75px, 0px);
+		transform: translate(77px, 0px);
 	}
 	&__item:not(:last-child) {
-		margin-right: 35px;
+		margin-right: 34px;
 	}
 	&__link.menu__item--active {
 		color: $title;
@@ -43,33 +43,24 @@
 
 .user-nav {
 	display: flex;
-	align-items: center;
+	min-height: 52px;
 		&__item {
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			width: 52px;
-			height: 52px;
 			position: relative;
 		}
 		&_img {
-			max-width: 100%;
-			max-height: 100%;
 			transition: fill 0.5s ;
 		}
 		&__item--search {
+			width: 52px;
 			border-radius: 50%;
 			background-color: $header-icon;
 			margin-right: 21px;
 			transition: background-color 0.5s ;
 		}
-		// &__item--search:hover.user-nav__img:hover path{
-		// 	background-color: $header-hover;
-		// }
-		// &__img:hover path{
-		// 	fill: #ffffff;
-		// 	background-color: $header-hover;
-		// }
 		&__item--heart {
 			width: 90px;
 			border-radius: 45px 0 0 45px;
@@ -77,10 +68,8 @@
 			position: relative;
 			transition: background-color 0.5s ;
 		}
-		&__item--heart:hover {
-			// background-color: #f1a96a;
-		}
-		&__decor {
+		&__item--heart::after {
+			content: '';
 			width: 1px;
 			height: 32px;
 			position: absolute;
@@ -93,9 +82,6 @@
 			background-color: $header-pink;
 			position: relative;
 			transition: background-color 0.5s ;
-		}
-		&__item--cart:hover {
-			// background-color: #f1a96a;
 		}
 		&__num {
 			width: 16px;
@@ -111,11 +97,12 @@
 			background-color: #ffffff;
 		}
 		&__item--button {
+			width: 52px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			border-radius: 50%;
-			padding: 0 16px;
+			padding: 0;
 			border: none;
 			cursor: pointer;
 			background-color: $header-icon;
