@@ -18,44 +18,73 @@
 
 
 $title: #243f4d;
-$icon: #344d5b;
 $header-menu: #436372;
 $header-pink: #fcd7b6;
+$pink: #fde3cc;
 $header-icon: #edf1f4;
 $header-hover: #a3bbc8;
 
 
 %myriadpro-400{
-	font-family: 'MyriadPro-Regular'; 
+	font-family: 'MyriadPro-Regular', sans-serif; 
 	font-weight: 400;
 }
 
 %rubik-500{
-	font-family: 'Rubik-Medium';
+	font-family: 'Rubik-Medium', sans-serif;
 	font-weight: 500;
 }
 
 %rubik-400{
-	font-family: 'Rubik-Regular';
+	font-family: 'Rubik-Regular', sans-serif;
 	font-weight: 400;
 }
 
 %poppins-700{
-	font-family: 'Poppins-Bold';
+	font-family: 'Poppins-Bold', sans-serif;
 	font-weight: 700;
 }
 
 %dmsans-700{
-	font-family: 'DMSans-Bold';
+	font-family: 'DMSans-Bold', sans-serif;
 	font-weight: 700;
 }
 
 %dmsans-500{
-	font-family: 'DMSans-Medium';
+	font-family: 'DMSans-Medium', sans-serif;
 	font-weight: 500;
 }
 
 %dmsans-400{
-	font-family: 'DMSans-Regular';
+	font-family: 'DMSans-Regular', sans-serif;
 	font-weight: 400;
+}
+
+%btn {
+	display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 200px;
+		@extend %rubik-500;
+		font-size: 15px;
+		line-height: 1;
+		text-decoration: none;
+		color: $header-menu;
+		background-color: $header-icon;
+		padding: 25px 19px 21px 27px;
+		transition: color 0.8s, background-color 0.8s;
+		@extend %btn-arrow;
+}
+
+%btn:hover {
+	color: #ffffff;
+	background-color: $header-hover;
+}
+
+%btn-arrow path{
+	transition: fill 0.8s;
+}
+
+%btn-arrow:hover .btn-arrow path{
+	fill: #ffffff;
 }
