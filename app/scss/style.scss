@@ -59,7 +59,7 @@
 		&__item--heart {
 			width: 90px;
 			border-radius: 45px 0 0 45px;
-			background-color: $header-pink;
+			background-color: $content-pink;
 			position: relative;
 		}
 		&__item--heart::after {
@@ -73,7 +73,7 @@
 		&__item--cart {
 			width: 90px;
 			border-radius: 0 45px 45px 0;
-			background-color: $header-pink;
+			background-color: $content-pink;
 			position: relative;
 		}
 		&__num {
@@ -115,7 +115,7 @@
 
 .top-slider {
 	&__wrapper {
-		background-color: $header-pink;
+		background-color: $content-pink;
 	}
 	&__container {
 		max-width: 1480px;
@@ -172,7 +172,7 @@
 	.slick-dots {
 		display: flex;
 		justify-content: center;
-		padding-bottom: 45px;
+		padding-bottom: 42px;
 		li {
 			button {
 				width: 30px;
@@ -201,7 +201,57 @@
 	
 }
 
-
+.advantages {
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		background-color: $support-pink;
+	}
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		padding: 50px 10px 30px;
+		flex-basis: 33.3%;
+	}
+	&__item:not(:last-child) {
+		border-right: 1px solid #e8e4df;
+	}
+	&__img {
+		width: 50px;
+		height: 50px;
+		margin-right: 30px;
+	}
+	&__content {
+		max-width: 215px;
+		position: relative;
+	}
+	&__content::after {
+		content: "";
+		width: 20px;
+		height: 21px;
+		border-radius: 50%;
+		position: absolute;
+		top: 30px;
+		left: -45px;
+		background-color: rgba(163, 187, 200, 0.3);
+	}
+	&__content--support {
+		max-width: 200px;
+	}	
+	&__title {
+		width: 215px;
+		@extend %dmsans-700;
+		font-size: 18px;
+		line-height: 1;
+		color: $h2-title;
+		margin-bottom: 8px;
+	}
+	&__content p {
+		color: $text;
+	}
+}
 
 
 
