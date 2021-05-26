@@ -253,7 +253,121 @@
 	}
 }
 
-
+.gallery {
+	&__top {
+		padding: 70px 0 35px;
+	}
+	&__title {
+		@extend %title;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	&__filter {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 30px;
+	}
+	&__filter-unit:not(:last-child) {
+		margin-right: 27px;
+		margin-bottom: 20px;
+	}
+	&__btn {
+		border: none;
+		padding: 0;
+		background-color: transparent;
+		@extend %dmsans-700;
+		font-size: 16px;
+		line-height: 1.2;
+		color: $gallery-btn;
+		transition: color 0.8s;
+	}
+	&__btn:hover {
+		color: #1a1a1a;
+	}
+	&__content {
+		margin: 0;
+		padding: 0;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+		grid-column-gap: 30px;
+		grid-row-gap: 40px;
+	}
+	&__cart {
+		max-width: 270px;
+		min-height: 380px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		text-align: center;
+		background-color: #ffffff;
+		padding: 27px 42px 38px;		
+    margin: 0 auto;
+	}
+	&__image-box {
+		min-height: 170px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		overflow: hidden;
+		position: relative;
+		margin: 0 auto;
+		transition: transform 0.5s;
+	}
+	&__image{
+		object-fit: cover;
+	}
+	&__link-box {
+		max-width: 167px;
+		width: 100%;
+		min-height: 45px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 auto;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -60px;
+		transition: bottom 0.5s;
+	}
+	&__image-box:hover {
+		transform: scale(1.1);
+	}
+	&__image-box:hover .gallery__link-box {
+		bottom: 25px;
+	}
+	&__link {
+		width: 45px;
+		height: 45px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		background-color: #ffffff;
+		transition: background-color 0.5s;
+	}
+	&__link-img {
+		width: 22px;
+		height: 20px;
+		transition: fill 0.5s;
+	}
+	&__link:hover {
+		background-color: $header-hover;
+	}
+	&__link:hover path {
+		fill: #ffffff;
+	}
+	&__cart-title {
+		@extend %dmsans-500;
+		line-height: 2.5;
+		color: $title;
+	}
+	&__price {
+		@extend %dmsans-700;
+		line-height: 2.5;
+		color: $header-hover;
+	}
+}
 
 
 
