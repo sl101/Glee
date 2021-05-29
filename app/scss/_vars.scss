@@ -24,6 +24,7 @@ $gallery-btn: #8b8b8b;
 $header-menu: #436372;
 $pink: #fde3cc;
 $content-pink: #fcd7b6;
+$opacity-content-pink: rgba(252, 215, 182, 0.2);
 $support-pink:#fff7f0;
 $header-icon: #edf1f4;
 $header-hover: #a3bbc8;
@@ -72,18 +73,19 @@ $header-hover: #a3bbc8;
 
 %btn {
 	display: flex;
-		justify-content: space-between;
-		align-items: center;
-		max-width: 200px;
-		@extend %rubik-500;
-		font-size: 15px;
-		line-height: 1;
-		text-decoration: none;
-		color: $header-menu;
-		background-color: $header-icon;
-		padding: 25px 19px 21px 27px;
-		transition: color 0.8s, background-color 0.8s;
-		@extend %btn-arrow;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 200px;
+	@extend %rubik-500;
+	font-size: 15px;
+	line-height: 1;
+	text-decoration: none;
+	outline: transparent;
+	color: $header-menu;
+	background-color: $header-icon;
+	padding: 25px 19px 21px 27px;
+	transition: color 0.8s, background-color 0.8s;
+	@extend %btn-arrow;
 }
 
 %btn:hover {
