@@ -28,7 +28,6 @@ $support-pink:#fff7f0;
 $header-icon: #edf1f4;
 $header-hover: #a3bbc8;
 
-
 %myriadpro-400{
 	font-family: 'MyriadPro-Regular', sans-serif; 
 	font-weight: 400;
@@ -94,6 +93,10 @@ $header-hover: #a3bbc8;
 
 %btn-arrow path{
 	transition: fill 0.8s;
+}
+
+%btn:hover .btn-arrow path {
+	fill: #ffffff;
 }
 
 %btn-arrow:hover .btn-arrow path{
