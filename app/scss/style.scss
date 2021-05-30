@@ -193,6 +193,10 @@
 					background-color: #ffffff;
 				}
 			}
+			button:hover {
+				color: $title;
+				background-color: #ffffff;
+			}
 		}
 		li:not(:last-child) {
 			margin-right: 11px;
