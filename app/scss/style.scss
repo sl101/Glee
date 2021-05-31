@@ -11,6 +11,12 @@
 		justify-content: space-between;
 		align-items: center;
 	}
+	&__navigation {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 }
 
 .menu {
@@ -25,7 +31,7 @@
 		margin-right: 34px;
 	}
 	&__link.menu__item--active {
-		color: $black-800;
+		color: $black-700;
 	}
 	&__link {
 		@extend %rubik-500;
@@ -35,7 +41,7 @@
 		transition: color 0.5s;
 	}
 	&__link:hover {
-		color: $black-800;
+		color: $black-700;
 	}
 }
 
@@ -68,7 +74,7 @@
 			height: 32px;
 			position: absolute;
 			right: 0;
-			background-color: #ffffff;
+			background-color: $white;
 		}
 		&__item--cart {
 			width: 90px;
@@ -87,7 +93,7 @@
 			top: 10px;
 			right: 25px;
 			color: $navy-600;
-			background-color: #ffffff;
+			background-color: $white;
 		}
 		&__item--button {
 			width: 52px;
@@ -105,7 +111,7 @@
 			transition: fill 0.8s;
 		}
 		&__item:hover .user-nav__img path{
-			fill: #ffffff;
+			fill: $white;
 		}
 		&__item--search:hover,
 		&__item--button:hover {
@@ -179,7 +185,7 @@
 				height: 29px;
 				border: none;
 				border-radius: 50%;
-				background-color: #fde3cc;
+				background-color: $pink-400;
 				@extend %rubik-500;
 				font-size: 11px;
 				line-height: 1;
@@ -190,19 +196,18 @@
 			&.slick-active {
 				button {
 					color: $navy-600;
-					background-color: #ffffff;
+					background-color: $white;
 				}
 			}
 			button:hover {
 				color: $navy-600;
-				background-color: #ffffff;
+				background-color: $white;
 			}
 		}
 		li:not(:last-child) {
 			margin-right: 11px;
 		}
 	}
-	
 }
 
 .advantages {
@@ -220,7 +225,7 @@
 		flex-basis: 33.3%;
 	}
 	&__item:not(:last-child) {
-		border-right: 1px solid #e8e4df;
+		border-right: 1px solid $grey-300;
 	}
 	&__img {
 		width: 50px;
@@ -239,7 +244,7 @@
 		position: absolute;
 		top: 30px;
 		left: -45px;
-		background-color: rgba(163, 187, 200, 0.3);
+		background-color: $grey-450;
 	}
 	&__content--support {
 		max-width: 200px;
@@ -287,10 +292,10 @@
 		transition: color 0.8s;
 	}
 	&__btn:hover {
-		color: #1a1a1a;
+		color: $black-800;
 	}
 	&__btn.mixitup-control-active {
-		color: #1a1a1a;
+		color: $black-800;
 	}
 	&__content {
 		margin: 0;
@@ -308,7 +313,7 @@
 		flex-direction: column;
 		justify-content: space-between;
 		text-align: center;
-		background-color: #ffffff;
+		background-color: $white;
 		padding: 27px 20px 35px;
     margin: 0 auto;
 	}
@@ -354,7 +359,7 @@
 		border-radius: 50%;
 		border:none;
 		padding: 0;
-		background-color: #ffffff;
+		background-color: $white;
 		transition: background-color 0.5s;
 	}
 	&__link-img {
@@ -366,7 +371,7 @@
 		background-color: $grey-400;
 	}
 	&__link:hover path {
-		fill: #ffffff;
+		fill: $white;
 	}
 	&__cart-info {
 		display: flex;
@@ -399,7 +404,7 @@
 		display: flex;
 		justify-content: center;
 		padding: 90px 0 85px;
-		background-color: rgba(254, 239, 226, 0.4);
+		background-color: $pink-350;
 	}
 	&__item:first-child {
 		margin-right: 30px;
@@ -422,7 +427,7 @@
 		@extend %dmsans-700;
 		font-size: 26px;
 		line-height: 1.2;
-		color: #243f4d;
+		color: $navy-600;
 	}
 	&__text {
 		max-width: 330px;
