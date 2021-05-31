@@ -1,66 +1,53 @@
-// #191919
-// #1a1a1a
-// #1f2044
-// #222933
-// #234969
-// #262626
-// #414141
-// #585858
-// #7b7b7b
-// #8b8b8b
-// #e0e0e0
-// #e1e1e1
-// #e5e5e5
-// #f8f8f8
+$black-800: #191919;
+$blue_700: #1f2044;
+$navy-600: #243f4d;
+// $navy-500: #234969;
+$navy-400: #436372;
+$grey-800: #414141;
+$grey-700: #585858;
+$grey-600: #7b7b7b;
+$grey-500: #8b8b8b;
+$grey-400: #a3bbc8;
+$grey-200: #edf1f4;
+$pink-550: rgba(252, 215, 182, 0.2);
+$pink-500: #fcd7b6;
+$pink-400: #fde3cc;
+$pink-200: #fff7f0;
+$white: #ffffff;
 
-// rgba(36,63,77,0.0)
-// rgba(67,99,114,0.0)
-
-$title-black: #191919;
-$title: #243f4d;
-$h2-title: #414141;
-$text: #585858;
-$gallery-btn: #8b8b8b;
-$header-menu: #436372;
-$pink: #fde3cc;
-$content-pink: #fcd7b6;
-$opacity-content-pink: rgba(252, 215, 182, 0.2);
-$support-pink:#fff7f0;
-$header-icon: #edf1f4;
-$header-hover: #a3bbc8;
 
 %myriadpro-400{
-	font-family: 'MyriadPro-Regular', sans-serif; 
+	font-family: 'MyriadPro', sans-serif; 
 	font-weight: 400;
 }
 
 %rubik-500{
-	font-family: 'Rubik-Medium', sans-serif;
+	font-family: 'Rubik', sans-serif;
 	font-weight: 500;
 }
 
 %rubik-400{
-	font-family: 'Rubik-Regular', sans-serif;
+	font-family: 'Rubik', sans-serif;
 	font-weight: 400;
 }
 
 %poppins-700{
-	font-family: 'Poppins-Bold', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	font-weight: 700;
 }
 
 %dmsans-700{
-	font-family: 'DMSans-Bold', sans-serif;
+	font-family: 'DMSans', sans-serif;
 	font-weight: 700;
 }
 
 %dmsans-500{
-	font-family: 'DMSans-Medium', sans-serif;
+	font-family: 'DMSans', sans-serif;
 	font-weight: 500;
 }
 
 %dmsans-400{
-	font-family: 'DMSans-Regular', sans-serif;
+	font-family: 'DMSans', sans-serif;
 	font-weight: 400;
 }
 
@@ -68,7 +55,7 @@ $header-hover: #a3bbc8;
 	@extend %dmsans-700;
 	font-size: 36px;
 	line-height: 1.2;
-	color: $title-black;
+	color: $black-800;
 }
 
 %btn {
@@ -81,8 +68,8 @@ $header-hover: #a3bbc8;
 	line-height: 1;
 	text-decoration: none;
 	outline: transparent;
-	color: $header-menu;
-	background-color: $header-icon;
+	color: $navy-400;
+	background-color: $grey-200;
 	padding: 25px 19px 21px 27px;
 	transition: color 0.8s, background-color 0.8s;
 	@extend %btn-arrow;
@@ -90,7 +77,7 @@ $header-hover: #a3bbc8;
 
 %btn:hover {
 	color: #ffffff;
-	background-color: $header-hover;
+	background-color: $grey-400;
 }
 
 %btn-arrow path{
