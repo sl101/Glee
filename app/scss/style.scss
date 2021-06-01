@@ -18,7 +18,11 @@
 		align-items: center;
 	}
 }
-
+.logo {
+	max-width: 170px;
+	width: 100%;
+	min-height: 39px;
+}
 .menu {
 	margin: 0 auto;
 	&__list {
@@ -47,70 +51,74 @@
 
 .user-nav {
 	display: flex;
-	min-height: 52px;
+	max-width: 323px;
+	width: 100%;
 		&__item {
+			min-height: 52px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			width: 52px;
 			position: relative;
-			transition: background-color 0.8s ;
+			transition: background-color 0.5s ;
 		}
 		&__item--search {
-			width: 52px;
+			max-width: 52px;
+			width: 100%;
 			border-radius: 50%;
 			background-color: $grey-200;
 			margin-right: 21px;
 		}
 		&__item--heart {
-			width: 90px;
+			max-width: 90px;
+			width: 100%;
 			border-radius: 45px 0 0 45px;
 			background-color: $pink-500;
 			position: relative;
 		}
 		&__item--heart::after {
 			content: '';
-			width: 1px;
-			height: 32px;
+			max-width: 1px;
+			width: 100%;
+			min-height: 32px;
 			position: absolute;
 			right: 0;
 			background-color: $white;
 		}
 		&__item--cart {
-			width: 90px;
+			max-width: 90px;
+			width: 100%;
 			border-radius: 0 45px 45px 0;
 			background-color: $pink-500;
 			position: relative;
 		}
 		&__num {
-			width: 16px;
-			height: 16px;
-			border-radius: 50%;
+			max-width: 40px;
+			min-height: 16px;
+			border-radius: 10px;
 			text-align: center;
 			font-size: 10px;
-			line-height: 1.6;
+			padding: 0 6px;
 			position: absolute;
 			top: 10px;
-			right: 25px;
+			left: 50px;
 			color: $navy-600;
 			background-color: $white;
 		}
 		&__item--button {
-			width: 52px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
+			max-width: 52px;
+			width: 100%;
 			border-radius: 50%;
-			padding: 0;
-			border: none;
-			cursor: pointer;
 			background-color: $grey-200;
 			margin-left: 18px;
 		} 
-		&__img path {
-			transition: fill 0.8s;
+		&__img {
+			max-width: 24px;
+			width: 100%;
+			min-height: 24px;
+			fill: $navy-600;
+			transition: fill 0.5s;
 		}
-		&__item:hover .user-nav__img path{
+		&__item:hover .user-nav__img {
 			fill: $white;
 		}
 		&__item--search:hover,
@@ -363,14 +371,15 @@
 		transition: background-color 0.5s;
 	}
 	&__link-img {
-		width: 22px;
-		height: 20px;
+		max-width: 24px;
+		height: 24px;
+		fill: $grey-400;
 		transition: fill 0.5s;
 	}
 	&__link:hover {
 		background-color: $grey-400;
 	}
-	&__link:hover path {
+	&__link:hover &__link-img {
 		fill: $white;
 	}
 	&__cart-info {

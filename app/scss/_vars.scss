@@ -79,7 +79,7 @@ $white: #ffffff;
 }
 
 %btn:hover {
-	color: #ffffff;
+	color: $white;
 	background-color: $grey-400;
 }
 
@@ -88,9 +88,9 @@ $white: #ffffff;
 }
 
 %btn:hover .btn-arrow path {
-	fill: #ffffff;
+	fill: $white;
 }
 
 %btn-arrow:hover .btn-arrow path{
-	fill: #ffffff;
+	fill: $white;
 }
