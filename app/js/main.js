@@ -19,4 +19,5 @@ $(function(){
 
 		let mixer_gallery = mixitup(container_gallery, config);
 		let mixer_design = mixitup(container_design, config);
+		
 });
