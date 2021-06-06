@@ -1,0 +1,16 @@
+@mixin lineclamp ($height, $lines){
+	display: -webkit-box;
+	height: $height;
+	-webkit-line-clamp: $lines;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@mixin scalehover ($scale, $time){
+	transition: transform 0.5s;
+	
+	&:hover {
+		transform: scale(1.1);
+	}
+}
