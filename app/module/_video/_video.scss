@@ -1,0 +1,33 @@
+
+.video {
+	padding: 60px 0 50px;
+
+	&__content {
+		display: block;
+		width: 100%;
+		min-height: 501px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		position: relative;
+		margin: 0 auto;
+	}
+
+	&__play-bg {
+		max-width: 98px;
+		width: 100%;
+		min-height: 98px;
+		border-radius: 50%;
+		background-color: $grey-400;
+		background-image: url("../images/icon/play.png");
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transition: box-shadow 0.5s;
+
+			&:hover {
+				box-shadow: 0 0 0 15px $grey-450;
+			}
+	}
+}

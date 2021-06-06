@@ -1,0 +1,90 @@
+
+.design {
+	padding: 100px 0 60px;
+
+	&__top {
+		margin-bottom: 70px;
+	}
+
+	&__title {
+		@extend %title;
+		text-align: center;
+		padding: 0 10px;
+		margin-bottom: 18px;
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+		grid-column-gap: 30px;
+		grid-row-gap: 34px;
+	}
+
+	&__item {
+		max-width: 370px;
+		width: 100%;
+		min-height: 246px;
+		margin: 0 auto;
+	}
+
+	.filter {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	
+		&__unit {
+
+			&:not(:last-child) {
+				margin-right: 27px;
+			}
+		}
+		
+		&__btn {
+			@extend %dmsans-700;
+			font-size: 16px;
+			line-height: 1.2;
+			background-color: transparent;
+			color: $grey-500;
+			transition: color 0.5s;
+			@include scalehover(1.1, 0.5s);
+
+			&:focus,
+			&:hover,
+			&:active,
+			&.mixitup-control-active {
+				color: $black-800;
+			}
+		}
+	}
+
+	.design-card {
+	
+		&__link {
+			@extend %dmsans-700;
+			line-height: 1.2;
+		}
+			
+		&__image {
+			max-width: 370px;
+			width: 100%;
+			min-height: 246px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			padding: 38px 5px 5px 36px;
+			@include scalehover(1.1, 0.5s);
+		}
+
+		&__title {
+			max-width: 169px;
+			font-size: 20px;
+			color: $black-800;
+			margin-bottom: 12px;
+		}
+	
+		&__type {
+			font-size: 16px;
+			color: $grey-400;
+		}
+	}
+}

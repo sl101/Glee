@@ -1,0 +1,35 @@
+.partners {
+	background-color: $pink-550;
+	margin-top: -170px;
+
+	&__content {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-evenly;
+		text-align: center;
+	}
+
+	&__item {
+		padding: 265px 0 80px;
+	}
+
+	&__link {
+		display: inline-block;
+		@include scalehover(1.1, 0.5s);
+	}
+
+	&__img {
+		max-width: 167px;
+		min-height: 48px;
+		filter: brightness(80%);
+		filter: contrast(30%); 
+
+		&--peterson {
+			filter: opacity(60%);
+		}
+	}
+}
