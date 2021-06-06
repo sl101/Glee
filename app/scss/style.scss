@@ -462,7 +462,7 @@
 		padding: 27px 20px 35px;
 		margin: 0 auto;
 
-		&__box {
+		&__view {
 			min-height: 170px;
 			display: flex;
 			flex-direction: column;
@@ -471,14 +471,15 @@
 			margin: 0 auto;
 
 			&:hover {
-				.card__links{
+
+				.card__icons-box {
 					z-index: 1;
 					bottom: 25px;
 				}
 			}
 		}
 
-		&__img-link {
+		&__image-link {
 			max-width: 230px;
 			min-height: 135px;
 		}
@@ -489,7 +490,7 @@
 			@include scalehover(1.1, 0.5s);
 		}
 
-		&__links {
+		&__icons-box {
 			max-width: 167px;
 			width: 100%;
 			min-height: 45px;
@@ -502,10 +503,10 @@
 			left: 0;
 			right: 0;
 			bottom: -60px;
-			transition: bottom 0.8s;
+			transition: bottom 0.8s, z-index 0.5s;
 		}
 
-		&__link {
+		&__icon-link {
 			max-width: 45px;
 			width: 100%;
 			min-height: 45px;
@@ -519,13 +520,13 @@
 			&:hover {
 				background-color: $grey-400;
 
-				.card__link-img {
+				.card__icon {
 					fill: $white;
 				}
 			}
 		}
 
-		&__link-img {
+		&__icon {
 			max-width: 24px;
 			width: 100%;
 			// min-height: 24px;
