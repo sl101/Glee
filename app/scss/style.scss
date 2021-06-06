@@ -753,7 +753,7 @@
 }
 
 .video {
-	padding: 60px 0;
+	padding: 60px 0 50px;
 
 	&__content {
 		display: block;
@@ -951,7 +951,6 @@
 
 .partners {
 	background-color: $pink-550;
-	// opacity: 0.3;
 	margin-top: -170px;
 
 	&__content {
@@ -966,7 +965,7 @@
 	}
 
 	&__item {
-		padding: 264px 0 89px;
+		padding: 265px 0 80px;
 	}
 
 	&__link {
@@ -987,7 +986,7 @@
 }
 
 .footer {
-	padding: 100px 0 39px;
+	padding: 95px 0 40px;
 
 	.footer-top {
 		display: flex;
@@ -998,30 +997,16 @@
 			@extend %logo;
 			position: relative;
 			top: -15px;
-			margin-bottom: 7px;
+			margin-bottom: 10px;
 		}
 
-		&__address {
-			max-width: 200px;
-			width: 100%;
-			margin-right: 100px;
-		}
-
-		&__services {
-			max-width: 170px;
-			width: 100%;
-			margin-right: 130px;
-		}
-
-		&__account {
-			max-width: 170px;
-			width: 100%; 
-			margin-right: 130px;
-		}
-
-		&__item-form {
+		&__item {
 			max-width: 270px;
-			width: 100%; 
+			width: 100%;
+
+			&:not(:last-child) {
+				margin-right: 30px;
+			}
 		}
 
 		&__link {
@@ -1033,15 +1018,14 @@
 			margin-bottom: 10px;
 			transition: color 0.5s;
 			@include scalehover(1.1, 0.5s);
+			
+			&--address {
+				max-width: 200px;	
+			}
 
 			&:hover {
 				color: $grey-800;
 			}
-		}
-	
-		&__phone {
-			margin-bottom: 5px;
-			line-height: 2.3;
 		}
 
 		&__contacts-name {
