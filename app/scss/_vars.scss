@@ -1,17 +1,26 @@
-$black-800: #191919;
-$blue_700: #1f2044;
+@import 'mixin';
+
+$black-800: #1a1a1a;
+$black-700: #191919;
+$blue-700: #1f2044;
 $navy-600: #243f4d;
-// $navy-500: #234969;
+$navy-550: rgba(37, 37, 37, 0.05);
+$navy-500: #262626;
 $navy-400: #436372;
 $grey-800: #414141;
 $grey-700: #585858;
 $grey-600: #7b7b7b;
 $grey-500: #8b8b8b;
+$grey-450: rgba(163, 187, 200, 0.3);
 $grey-400: #a3bbc8;
+$grey-300: #e8e4df;
+$grey-250: #e0e0e0;
 $grey-200: #edf1f4;
+$grey-100: #f8f8f8;
 $pink-550: rgba(252, 215, 182, 0.2);
 $pink-500: #fcd7b6;
 $pink-400: #fde3cc;
+$pink-350: rgba(254, 239, 226, 0.4);
 $pink-200: #fff7f0;
 $white: #ffffff;
 
@@ -51,11 +60,18 @@ $white: #ffffff;
 	font-weight: 400;
 }
 
+%logo {
+	display: block;
+	max-width: 170px;
+	min-height: 39px;
+	@include scalehover(1.1, 0.5s);
+}
+
 %title {
 	@extend %dmsans-700;
 	font-size: 36px;
 	line-height: 1.2;
-	color: $black-800;
+	color: $black-700;
 }
 
 %btn {
@@ -63,6 +79,7 @@ $white: #ffffff;
 	justify-content: space-between;
 	align-items: center;
 	max-width: 200px;
+	width: 100%;
 	@extend %rubik-500;
 	font-size: 15px;
 	line-height: 1;
@@ -72,22 +89,38 @@ $white: #ffffff;
 	background-color: $grey-200;
 	padding: 25px 19px 21px 27px;
 	transition: color 0.8s, background-color 0.8s;
-	@extend %btn-arrow;
 }
 
 %btn:hover {
-	color: #ffffff;
+	color: $white;
 	background-color: $grey-400;
 }
 
-%btn-arrow path{
+%btn-arrow {
+	max-width: 22px;
+	width: 100%;
+	height: 9px;
+	fill: $navy-400;
 	transition: fill 0.8s;
 }
 
-%btn:hover .btn-arrow path {
-	fill: #ffffff;
+%btn:hover %btn-arrow {
+	fill: $white;
 }
 
-%btn-arrow:hover .btn-arrow path{
-	fill: #ffffff;
+%linkhover {
+	transition: background-color 0.5s, color 05s, border-color 0.5s;
+
+	&:hover {
+		background-color: $pink-550;
+		color: $navy-400;
+		border-color: $navy-400;
+	}
+}
+
+@function max($numbers...) {
+	@return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+	@return m#{i}n(#{$numbers});
 }
