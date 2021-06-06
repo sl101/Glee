@@ -8,6 +8,14 @@ $(function(){
 		autoplaySpeed: 2500
 	});
 
+	$('.partners__content').slick({
+		dots: false,
+		arrows: false,
+		fade: true,
+		autoplay: true,
+		autoplaySpeed: 2500
+	});
+
 	let container_gallery = document.querySelector('[data-ref="gallery"]');
   let container_design = document.querySelector('[data-ref="design"]');
 

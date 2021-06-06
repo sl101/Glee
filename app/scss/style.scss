@@ -183,13 +183,7 @@
 		align-items: flex-end;
 		padding: 116px 5px 206px;
 		position: relative;
-	}
 
-	&__content {
-		margin-right: 115px;
-	}
-
-	&__box {
 		&::after {
 			content:  url("../images/circle.png");
 			max-width: 622px;
@@ -202,6 +196,10 @@
 			top: 0;
 			right: 10%;
 		}
+	}
+
+	&__content {
+		margin-right: 115px;
 	}
 
 	&__title {
@@ -247,7 +245,9 @@
 		display: flex;
 		justify-content: center;
 		padding-bottom: 42px;
+
 		li {
+
 			button {
 				width: 30px;
 				height: 29px;
@@ -260,17 +260,18 @@
 				color: $navy-400;
 				padding: 0;
 				transition: color 0.5s, background-color 0.5s;
+
+				&:hover {
+					background-color: $white;
+				}
 			}
 
 			&.slick-active {
+
 				button {
 					color: $navy-600;
 					background-color: $white;
-
-					&:hover {
-						color: $navy-600;
 						background-color: $white;
-					}
 				}
 			}
 
@@ -885,6 +886,8 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		background-color: $white;
+		z-index: 1;
 		padding: 36px 30px 0;
 		position: relative;
 	}
@@ -956,6 +959,31 @@
 	}
 }
 
+.partners {
+	background-color: $pink-500;
+	opacity: 0.3;
+	margin-top: -170px;
+
+	&__content {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-evenly;
+		text-align: center;
+	}
+
+	&__item {
+		padding: 264px 0 89px;
+	}
+
+	&__img {
+		max-width: 167px;
+		min-height: 48px;
+	}
+}
 
 .footer {
 	padding: 100px 0 39px;
@@ -1081,7 +1109,7 @@
 	.footer-bottom {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start;
 		padding-top: 30px;
 
 		&__copy {
@@ -1095,12 +1123,11 @@
 
 		&__list {
 			display: flex;
+			
 		}
 
 		&__item {
 			height: 17px;
-			display: flex;
-			align-items: center;
 
 			&:not(:last-child) {
 				margin-right: 15px;
@@ -1110,7 +1137,6 @@
 		}
 
 		&__link {
-			display: block;
 			@extend %rubik-400;
 			font-size: 14px;
 			line-height: 2.3;
