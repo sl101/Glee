@@ -1,3 +1,5 @@
+@import 'mixin';
+
 $black-800: #1a1a1a;
 $black-700: #191919;
 $blue-700: #1f2044;
@@ -58,6 +60,13 @@ $white: #ffffff;
 	font-weight: 400;
 }
 
+%logo {
+	display: block;
+	max-width: 170px;
+	min-height: 39px;
+	@include scalehover(1.1, 0.5s);
+}
+
 %title {
 	@extend %dmsans-700;
 	font-size: 36px;
@@ -97,6 +106,16 @@ $white: #ffffff;
 
 %btn:hover %btn-arrow {
 	fill: $white;
+}
+
+%linkhover {
+	transition: background-color 0.5s, color 05s, border-color 0.5s;
+
+	&:hover {
+		background-color: $pink-550;
+		color: $navy-400;
+		border-color: $navy-400;
+	}
 }
 
 @function max($numbers...) {
