@@ -912,6 +912,8 @@
 	}
 
 	&__date {
+		display: flex;
+		align-items: baseline;
 		@include scalehover(1.1, 0.5s);
 
 		&--icon {
@@ -929,6 +931,8 @@
 	}
 
 	&__author {
+		display: flex;
+		align-items: baseline;
 		@include scalehover(1.1, 0.5s);
 
 		&--icon {
