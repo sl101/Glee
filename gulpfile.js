@@ -20,7 +20,7 @@ function browsersync() {
 			baseDir: 'app/',
 			// middleware: sessionStorage({ baseDir: 'app/', ext: '.html'}),
 		},
-		notofy: false
+		notify: false
 	});
 }
 

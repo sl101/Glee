@@ -24,7 +24,8 @@ $pink-350:  rgba(254, 239, 226, 0.4);
 $pink-200:  #fff7f0;
 $white:     #ffffff;
 
-$screen-sm:  480px;
+$screen-xm:  480px;
+// $screen-sm:  576px;
 $screen-md:  768px;
 $screen-lg:  992px;
 $screen-xl: 1200px;
@@ -67,7 +68,8 @@ $screen-xl: 1200px;
 
 %logo {
 	display: block;
-	max-width: 170px;
+	max-width: 150px;
+	width: 100%;
 	min-height: 39px;
 	@include scalehover(1.1, 0.5s);
 }

@@ -1,1077 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Glee | Home-page</title>
-	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-	<link rel="stylesheet" href="css/index.min.css">
-</head>
-
-<body>
-
-	<header class="header">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glee | Home-page</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.min.css">
+  </head>
+  <body>
+    <header class="header">
 	<div class="full-container">
-		<div class="header__wrapper">
-			<nav class="header__navigation">
+		<nav class="header__navigation">
 
-				<a class="logo" href="#">
-					<img class="logo__img" src="images/logo.png" alt="Logo">
+			<a class="logo" href="#">
+				<img class="logo__img" src="images/logo.png" alt="Logo">
+			</a>
+
+			<div class="menu">
+
+				<button class="menu__button">
+					<span class="menu__button--middle"></span>
+				</button>
+
+				<!-- <div class="menu__list-wrapper"> -->
+				<ul class="menu__list">
+					<li class="menu__item">
+						<a class="menu__link menu__link--active" href="#">Home
+							<span class="menu__sublink">+</span>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#">About</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#">Services</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#">Pages
+							<span class="menu__sublink">+</span>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#">News</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#">Contact</a>
+					</li>
+				</ul>
+				<!-- </div> -->
+
+			</div>
+
+			<div class="user-nav">
+				<a class="user-nav__item user-nav__item--search" href="#">
+					<svg class="user-nav__img user-nav__img--search">
+						<use xlink:href="images/sprite.svg#search-header"></use>
+					</svg>
+					<span class="sr-only">search</span>
 				</a>
+				<a class="user-nav__item user-nav__item--heart" href="#">
+					<svg class="user-nav__img user-nav__img--heart">
+						<use xlink:href="images/sprite.svg#heart-header"></use>
+					</svg>
+					<span class="sr-only">liked products</span>
+					<span class="user-nav__num">0</span>
+				</a>
+				<a class="user-nav__item  user-nav__item--cart" href="#">
+					<svg class="user-nav__img user-nav__img--cart">
+						<use xlink:href="images/sprite.svg#backet-header"></use>
+					</svg>
+					<span class="sr-only">basket of goods</span>
+					<span class="user-nav__num">0</span>
+				</a>
+				<button class="user-nav__item user-nav__item--button" type="button">
+					<svg class="user-nav__img user-nav__img--button">
+						<use xlink:href="images/sprite.svg#dots-header"></use>
+					</svg>
+					<span class="sr-only">product selector</span>
+				</button>
+			</div>
 
-				<div class="menu">
-					<ul class="menu__list">
-						<li class="menu__item">
-							<a class="menu__link menu__link--active" href="#">Home
-								<span class="menu__sublink">+</span>
-							</a>
-						</li>
-						<li class="menu__item">
-							<a class="menu__link" href="#">About</a>
-						</li>
-						<li class="menu__item">
-							<a class="menu__link" href="#">Services</a>
-						</li>
-						<li class="menu__item">
-							<a class="menu__link" href="#">Pages
-								<span class="menu__sublink">+</span>
-							</a>
-						</li>
-						<li class="menu__item">
-							<a class="menu__link" href="#">News</a>
-						</li>
-						<li class="menu__item">
-							<a class="menu__link" href="#">Contact</a>
-						</li>
-					</ul>
-				</div>
+		</nav>
 
-				<div class="user-nav">
-					<a class="user-nav__item user-nav__item--search" href="#">
-						<svg class="user-nav__img user-nav__img--search">
-							<use xlink:href="images/sprite.svg#search-header"></use>
-						</svg>
-						<span class="sr-only">search</span>
-					</a>
-					<a class="user-nav__item user-nav__item--heart" href="#">
-						<svg class="user-nav__img user-nav__img--heart">
-							<use xlink:href="images/sprite.svg#heart-header"></use>
-						</svg>
-						<span class="sr-only">liked products</span>
-						<span class="user-nav__num">0</span>
-					</a>
-					<a class="user-nav__item  user-nav__item--cart" href="#">
-						<svg class="user-nav__img user-nav__img--cart">
-							<use xlink:href="images/sprite.svg#backet-header"></use>
-						</svg>
-						<span class="sr-only">basket of goods</span>
-						<span class="user-nav__num">0</span>
-					</a>
-					<button type="button" class="user-nav__item user-nav__item--button">
-						<svg class="user-nav__img user-nav__img--button">
-							<use xlink:href="images/sprite.svg#dots-header"></use>
-						</svg>
-						<span class="sr-only">product selector</span>
-					</button>
-				</div>
-
-			</nav>
-		</div>
 	</div>
 </header>
-
-	<main class="main">
-
-			<section class="top-slider">
-			<h1 class="sr-only">Smart and Trendy</h1>
-			<div class="full-container">
-				<div class="top-slider__wrapper">
-					<div class="top-slider__inner">
-
-						<div class="top-slider__item">
-							<div class="top-slider__box">
-								<div class="top-slider__content">
-									<a class="top-slider__title" href="#">
-										Smart and Trendy
-									</a>
-									<div class="top-slider__text">
-										Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-									</div>
-									<a class="top-slider__btn" href="#">
-										Shop Now
-										<svg class="top-slider__arrow">
-											<use xlink:href="images/sprite.svg#arrow"></use>
-										</svg>
-									</a>
-								</div>
-								<img class="top-slider__img" src="images/sofa.png" alt="sofa - new collection">
-							</div>
-						</div>
-
-						<div class="top-slider__item">
-							<div class="top-slider__box">
-								<div class="top-slider__content">
-									<a class="top-slider__title" href="#">
-										Smart and Trendy
-									</a>
-									<div class="top-slider__text">
-										Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-									</div>
-									<a class="top-slider__btn" href="#">
-										Shop Now
-										<svg class="top-slider__arrow">
-											<use xlink:href="images/sprite.svg#arrow"></use>
-										</svg>
-									</a>
-								</div>
-								<img class="top-slider__img" src="images/sofa.png" alt="sofa - new collection">
-							</div>
-						</div>
-
-						<div class="top-slider__item">
-							<div class="top-slider__box">
-								<div class="top-slider__content">
-									<a class="top-slider__title" href="#">
-										Smart and Trendy
-									</a>
-									<div class="top-slider__text">
-										Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-									</div>
-									<a class="top-slider__btn" href="#">
-										Shop Now
-										<svg class="top-slider__arrow">
-											<use xlink:href="images/sprite.svg#arrow"></use>
-										</svg>
-									</a>
-								</div>
-								<img class="top-slider__img" src="images/sofa.png" alt="sofa - new collection">
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="advantages">
-			<h2 class="sr-only">Advantages</h2>
-			<div class="full-container">
-				<ul class="advantages__items">
-
-					<li class="advantages__item">
-						<div class="advantages__content  advantages__content--support">
-							<a class="advantages__subtitle" href="#">
-								Support 24/7.
-							</a>
-							<div class="advantages__text--support">
-								Contact us 24 hours a day, 7 days a week.
-							</div>
-						</div>
-					</li>
-
-					<li class="advantages__item advantages__item--delivery">
-						<div class="advantages__content advantages__content--delivery">
-							<a class="advantages__subtitle" href="#">
-								Delivery.
-							</a>
-							<div class="advantages__text advantages__text">
-								Free shipping on all US order.
-							</div>
-						</div>
-					</li>
-
-					<li class="advantages__item">
-						<div class="advantages__content advantages__content--payment">
-							<a class="advantages__subtitle" href="#">
-								100% Payment secure.
-							</a>
-							<div>
-								We ensure secure payment with PEV.
-							</div>
-						</div>
-					</li>
-
-				</ul>
-			</div>
-		</section>
-			<section class="gallery">
-			<div class="container">
-				<div class="gallery__inner" data-ref="gallery">
-					<div class="gallery__top">
-						<h3 class="title gallery__title">
-							Products of the week
-						</h3>
-						<ul class="filter">
-							<li class="filter__unit">
-								<button class="filter__btn mixitup-control-active" type="button" data-filter="all">
-									All
-								</button>
-							</li>
-							<li class="filter__unit">
-								<button class="filter__btn" type="button" data-filter=".furnitures">
-									Furnitures
-								</button>
-							</li>
-							<li class="filter__unit">
-								<button class="filter__btn" type="button" data-filter=".chairs">
-									Chairs
-								</button>
-							</li>
-							<li class="filter__unit">
-								<button class="filter__btn" type="button" data-filter=".lighting">
-									Lighting
-								</button>
-							</li>
-							<li class="filter__unit">
-								<button class="filter__btn" type="button" data-filter=".decor">
-									Decor
-								</button>
-							</li>
-						</ul>
-					</div>
-					<ul class="gallery__content">
-						<li class="gallery__item mix chairs">
-							<article class="card">
-								<div class="card__view">
-									<a class="card__img-link" href="#">
-										<img class="card__image" src="images/gallery/1.jpg" alt="Wooden radio">
-									</a>
-									<div class="card__icons-box">
-										<a class="card__icon-link" href="#">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#search"></use>
-											</svg>
-											<span class="sr-only">search</span>
-										</a>
-										<button type="button" class="card__icon-link">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#backet"></use>
-											</svg>
-											<span class="sr-only">add to basket</span>
-										</button>
-										<button type="button" class="card__icon-link">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#heart"></use>
-											</svg>
-											<span class="sr-only">add to your favorites</span>
-										</button>
-									</div>
-								</div>
-								<div class="card__info">
-									<a class="card__title-link" href="#">
-										<h4 class="card__title">
-											Wooden radio
-										</h4>
-									</a>
-									<div class="card__price">
-										<span class="card__curency">$</span>29.00
-									</div>
-								</div>
-							</article>
-						</li>
-						<li class="gallery__item mix chairs lighting">
-							<article class="card">
-								<div class="card__view">
-									<a class="card__img-link" href="#">
-										<img class="card__image" src="images/gallery/2.jpg" alt="Wooden chair">
-									</a>
-									<div class="card__icons-box">
-										<a class="card__icon-link" href="#">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#search"></use>
-											</svg>
-											<span class="sr-only">search</span>
-										</a>
-										<button type="button" class="card__icon-link">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#backet"></use>
-											</svg>
-											<span class="sr-only">add to basket</span>
-										</button>
-										<button type="button" class="card__icon-link">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#heart"></use>
-											</svg>
-											<span class="sr-only">add to your favorites</span>
-										</button>
-									</div>
-								</div>
-								<div class="card__info">
-									<a class="card__title-link" href="#">
-										<h4 class="card__title">
-											Wooden chair
-										</h4>
-									</a>
-									<div class="card__price">
-										<span class="card__curency">$</span>29.00
-									</div>
-								</div>
-							</article>
-						</li>
-						<li class="gallery__item mix chairs">
-							<article class="card">
-								<div class="card__view">
-									<a class="card__img-link" href="#">
-										<img class="card__image" src="images/gallery/3.jpg" alt="White chair">
-									</a>
-									<div class="card__icons-box">
-										<a class="card__icon-link" href="#">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#search"></use>
-											</svg>
-											<span class="sr-only">search</span>
-										</a>
-										<button type="button" class="card__icon-link">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#backet"></use>
-											</svg>
-											<span class="sr-only">add to basket</span>
-										</button>
-										<button type="button" class="card__icon-link">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#heart"></use>
-											</svg>
-											<span class="sr-only">add to your favorites</span>
-										</button>
-									</div>
-								</div>
-								<div class="card__info">
-									<a class="card__title-link" href="#">
-										<h4 class="card__title">
-											White chair
-										</h4>
-									</a>
-									<div class="card__price">
-										<span class="card__curency">$</span>29.00
-									</div>
-								</div>
-							</article>
-						</li>
-						<li class="gallery__item mix lighting">
-							<article class="card">
-								<div class="card__view">
-									<a class="card__img-link" href="#">
-										<img class="card__image" src="images/gallery/4.jpg" alt="Retro table">
-									</a>
-									<div class="card__icons-box">
-										<a class="card__icon-link" href="#">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#search"></use>
-											</svg>
-											<span class="sr-only">search</span>
-										</a>
-										<button type="button" class="card__icon-link">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#backet"></use>
-											</svg>
-											<span class="sr-only">add to basket</span>
-										</button>
-										<button type="button" class="card__icon-link">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#heart"></use>
-											</svg>
-											<span class="sr-only">add to your favorites</span>
-										</button>
-									</div>
-								</div>
-								<div class="card__info">
-									<a class="card__title-link" href="#">
-										<h4 class="card__title">
-											Retro table
-										</h4>
-									</a>
-									<div class="card__price">
-										<span class="card__curency">$</span>29.00
-									</div>
-								</div>
-							</article>
-						</li>
-						<li class="gallery__item mix furnitures">
-							<article class="card">
-								<div class="card__view">
-									<a class="card__img-link" href="#">
-										<img class="card__image" src="images/gallery/5.jpg" alt="Wooden radio">
-									</a>
-									<div class="card__icons-box">
-										<a class="card__icon-link" href="#">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#search"></use>
-											</svg>
-											<span class="sr-only">search</span>
-										</a>
-										<button type="button" class="card__icon-link">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#backet"></use>
-											</svg>
-											<span class="sr-only">add to basket</span>
-										</button>
-										<button type="button" class="card__icon-link">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#heart"></use>
-											</svg>
-											<span class="sr-only">add to your favorites</span>
-										</button>
-									</div>
-								</div>
-								<div class="card__info">
-									<a class="card__title-link" href="#">
-										<h4 class="card__title">
-											Wooden radio
-										</h4>
-									</a>
-									<div class="card__price">
-										<span class="card__curency">$</span>29.00
-									</div>
-								</div>
-							</article>
-						</li>
-						<li class="gallery__item mix chairs lighting">
-							<article class="card">
-								<div class="card__view">
-									<a class="card__img-link" href="#">
-										<img class="card__image" src="images/gallery/6.jpg" alt="Wooden chair">
-									</a>
-									<div class="card__icons-box">
-										<a class="card__icon-link" href="#">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#search"></use>
-											</svg>
-											<span class="sr-only">search</span>
-										</a>
-										<button type="button" class="card__icon-link">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#backet"></use>
-											</svg>
-											<span class="sr-only">add to basket</span>
-										</button>
-										<button type="button" class="card__icon-link">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#heart"></use>
-											</svg>
-											<span class="sr-only">add to your favorites</span>
-										</button>
-									</div>
-								</div>
-								<div class="card__info">
-									<a class="card__title-link" href="#">
-										<h4 class="card__title">
-											Wooden chair
-										</h4>
-									</a>
-									<div class="card__price">
-										<span class="card__curency">$</span>29.00
-									</div>
-								</div>
-							</article>
-						</li>
-						<li class="gallery__item mix decor chairs">
-							<article class="card">
-								<div class="card__view">
-									<a class="card__img-link" href="#">
-										<img class="card__image" src="images/gallery/7.jpg" alt="White chair">
-									</a>
-									<div class="card__icons-box">
-										<a class="card__icon-link" href="#">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#search"></use>
-											</svg>
-											<span class="sr-only">search</span>
-										</a>
-										<button type="button" class="card__icon-link">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#backet"></use>
-											</svg>
-											<span class="sr-only">add to basket</span>
-										</button>
-										<button type="button" class="card__icon-link">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#heart"></use>
-											</svg>
-											<span class="sr-only">add to your favorites</span>
-										</button>
-									</div>
-								</div>
-								<div class="card__info">
-									<a class="card__title-link" href="#">
-										<h4 class="card__title">
-											White chair
-										</h4>
-									</a>
-									<div class="card__price">
-										<span class="card__curency">$</span>29.00
-									</div>
-								</div>
-							</article>
-						</li>
-						<li class="gallery__item mix decor lighting">
-							<article class="card">
-								<div class="card__view">
-									<a class="card__img-link" href="#">
-										<img class="card__image" src="images/gallery/8.jpg" alt="Retro table">
-									</a>
-									<div class="card__icons-box">
-										<a class="card__icon-link" href="#">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#search"></use>
-											</svg>
-											<span class="sr-only">search</span>
-										</a>
-										<button type="button" class="card__icon-link">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#backet"></use>
-											</svg>
-											<span class="sr-only">add to basket</span>
-										</button>
-										<button type="button" class="card__icon-link">
-											<svg class="card__icon">
-												<use xlink:href="images/sprite.svg#heart"></use>
-											</svg>
-											<span class="sr-only">add to your favorites</span>
-										</button>
-									</div>
-								</div>
-								<div class="card__info">
-									<a class="card__title-link" href="#">
-										<h4 class="card__title">
-											Retro table
-										</h4>
-									</a>
-									<div class="card__price">
-										<span class="card__curency">$</span>29.00
-									</div>
-								</div>
-							</article>
-						</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="sale">
-				<h3 class="sr-only">Related products</h3>
-				<div class="full-container">
-					<div class="sale__list">
-
-						<div class="sale-card">
-							<a class="sale-card__icon-link" href="#">
-								<img class="sale-card__img" src="images/lamp/sconce.png" alt="Lamp sconce">
-							</a>
-							<div class="sale-card__content">
-								<a class="sale-card__title-link" href="#">
-									Mirum Notare Tellus
-								</a>
-								<div class="sale-card__text">
-									<p>
-										LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
-									</p>
-								</div>
-								<a href="" class="sale-card__btn btn">
-									View More
-									<svg class="sale-card__arrow">
-										<use xlink:href="images/sprite.svg#arrow"></use>
-									</svg>
-								</a>
-							</div>
-						</div>
-
-						<div class="sale-card sale-card--elit">
-							<a class="sale-card__icon-link sale-card__icon-link--elit" href="#">
-								<img class="sale-card__img" src="images/lamp/elit.png" alt="Lamp elit">
-							</a>
-							<div class="sale-card__content sale-card__content--elit">
-								<a class="sale-card__title-link" href="#">Malesuada Tempor Euismod</a>
-								<div class="sale-card__text">
-									<p>
-										50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight
-									</p>
-								</div>
-								<a href="" class="sale-card__btn btn">
-									View More
-									<svg class="sale-card__arrow">
-										<use xlink:href="images/sprite.svg#arrow"></use>
-									</svg>
-								</a>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</section>
-			<section class="design" data-ref="design">
-			<div class="container">
-
-				<div class="design__top">
-					<h3 class="title design__title">
-						New Design
-					</h3>
-					<ul class="filter">
-						<li class="filter__unit">
-							<button class="filter__btn mixitup-control-active" type="button" data-filter="all">
-								All
-							</button>
-						</li>
-						<li class="filter__unit">
-							<button class="filter__btn" type="button" data-filter=".furnitures">
-								Furnitures
-							</button>
-						</li>
-						<li class="filter__unit">
-							<button class="filter__btn" type="button" data-filter=".chairs">
-								Chairs
-							</button>
-						</li>
-						<li class="filter__unit">
-							<button class="filter__btn" type="button" data-filter=".lighting">
-								Lighting
-							</button>
-						</li>
-						<li class="filter__unit">
-							<button class="filter__btn" type="button" data-filter=".decor">
-								Decor
-							</button>
-						</li>
-					</ul>
-				</div>
-
-				<ul class="design__content">
-					<li class="design__item mix chairs decor lighting">
-						<article class="design-card">
-							<a class="design-card__icon-link" href="#">
-								<div class="design-card__image" style="background-image: url(images/design/1.jpg);">
-									<h4 class="design-card__title-link">
-										Beat Flat Pendant Black
-									</h4>
-									<span class="design-card__type">
-										Classic
-									</span>
-								</div>
-							</a>
-						</article>
-					</li>
-
-					<li class="design__item mix chairs decor lighting">
-						<article class="design-card">
-							<a class="design-card__icon-link" href="#">
-								<div class="design-card__image" style="background-image: url(images/design/2.jpg);">
-									<h4 class="design-card__title-link">
-										Lampe Sur Pieds Bamboo
-									</h4>
-									<span class="design-card__type">
-										Classic
-									</span>
-								</div>
-							</a>
-						</article>
-					</li>
-
-					<li class="design__item mix chairs decor">
-						<article class="design-card">
-							<a class="design-card__icon-link" href="#">
-								<div class="design-card__image" style="background-image: url(images/design/3.jpg);">
-									<h4 class="design-card__title-link">
-										Rattan Rocking Chair
-									</h4>
-									<span class="design-card__type">
-										Classic
-									</span>
-								</div>
-							</a>
-						</article>
-					</li>
-
-					<li class="design__item mix chair furnitures lighting">
-						<article class="design-card">
-							<a class="design-card__icon-link" href="#">
-								<div class="design-card__image" style="background-image: url(images/design/4.jpg);">
-									<h4 class="design-card__title-link">
-										Rattan Rocking Chair
-									</h4>
-									<span class="design-card__type">
-										Classic
-									</span>
-								</div>
-							</a>
-						</article>
-					</li>
-
-					<li class="design__item mix chairs">
-						<article class="design-card">
-							<a class="design-card__icon-link" href="#">
-								<div class="design-card__image design-card__image--small"
-									style="background-image: url(images/design/5.jpg);">
-									<h4 class="design-card__title-link">
-										Rattan Rocking Chair
-									</h4>
-									<span class="design-card__type">
-										Classic
-									</span>
-								</div>
-							</a>
-						</article>
-					</li>
-
-					<li class="design__item mix decor lighting">
-						<article class="design-card">
-							<a class="design-card__icon-link" href="#">
-								<div class="design-card__image" style="background-image: url(images/design/6.jpg);">
-									<h4 class="design-card__title-link">
-										Lampe Sur Pieds Bamboo
-									</h4>
-									<span class="design-card__type">
-										Classic
-									</span>
-								</div>
-							</a>
-						</article>
-					</li>
-
-				</ul>
-			</div>
-		</section>
-	
-		<section class="video">
-			<h2 class="sr-only">Video</h2>
-			<a class="video__content" data-fancybox
-				href="https://www.youtube.com/watch?v=FlME5z9tmLM&list=RDCMUClqxWoHXKDX4PJtoZ8p_oLQ&index=6"
-				style="background-image: url(images/video_bg.jpg);">
-				<span class="sr-only">Watch the video on youtube</span>
-				<div class="video__play-bg"></div>
-			</a>
-		</section>
-			<section class="news">
-			<div class="container">
-
-				<div class="news__top">
-					<h3 class="news__title title">
-						Our Insights & Articles
-					</h3>
-					<a class="news__articles" href="#">
-						<span class="news__articles-link">
-							View All
-						</span>
-						<span class="news__articles-arrow"></span>
-					</a>
-				</div>
-
-				<ul class="news__list">
-					<li class="news__item">
-						<a class="news__imglink" href="#">
-							<img class="news__img" src="images/news/1.jpg" alt="article about...">
-						</a>
-						<div class="news__content">
-							<a class="news__link" href="#">news</a>
-							<a class="news__preview" href="#">
-								Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venim
-							</a>
-							<div class="news__info">
-								<a class="news__date" href="#">
-									<span class="news__date--icon"></span>
-									<span class="news__date--text">28 january, 2020</span>
-								</a>
-
-								<a class="news__author" href="#">
-									<span class="news__author--icon"></span>
-									<span class="news__author--text">by admin</span>
-								</a>
-
-							</div>
-						</div>
-					</li>
-
-					<li class="news__item">
-						<a class="news__imglink" href="#">
-							<img class="news__img" src="images/news/2.jpg" alt="article about...">
-						</a>
-						<div class="news__content">
-							<a class="news__link" href="#">news</a>
-							<a class="news__preview" href="#">
-								Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-							</a>
-							<div class="news__info">
-								<a class="news__date" href="#">
-									<span class="news__date--icon"></span>
-									<span class="news__date--text">
-										28 january, 2020
-									</span>
-								</a>
-
-								<a class="news__author" href="#">
-									<span class="news__author--icon"></span>
-									<span class="news__author--text">
-										by admin
-									</span>
-								</a>
-
-							</div>
-						</div>
-					</li>
-
-					<li class="news__item">
-						<a class="news__imglink" href="#">
-							<img class="news__img" src="images/news/3.jpg" alt="article about...">
-						</a>
-						<div class="news__content">
-							<a class="news__link" href="#">news</a>
-							<a class="news__preview" href="#">
-								Rncididunt ut labore et dolore magna aliqua. Ut enim
-							</a>
-							<div class="news__info">
-								<a class="news__date" href="#">
-									<span class="news__date--icon"></span>
-									<span class="news__date--text">
-										28 january, 2020
-									</span>
-								</a>
-
-								<a class="news__author" href="#">
-									<span class="news__author--icon"></span>
-									<span class="news__author--text">
-										by admin
-									</span>
-								</a>
-
-							</div>
-						</div>
-					</li>
-				</ul>
-				
-			</div>
-		</section>
-			<section class="partners">
-			<h2 class="sr-only">Partners</h2>
-			<div class="container">
-				<div class="partners__content">
-
-					<div class="parners__box">
-						<ul class="partners__list">
-							<li class="partners__item">
-								<a href="" class="partners__link">
-									<img class="partners__img partners__img--peterson" src="images/partners/1.png"
-										alt="Peterson Stephanie" />
-								</a>
-							</li>
-							<li class="partners__item">
-								<a href="" class="partners__link">
-									<img class="partners__img" src="images/partners/2.png" alt="KMN consalting">
-								</a>
-							</li>
-							<li class="partners__item">
-								<a href="" class="partners__link">
-									<img class="partners__img" src="images/partners/3.png" alt="Chainforce">
-								</a>
-							</li>
-							<li class="partners__item">
-								<a href="" class="partners__link">
-									<img class="partners__img" src="images/partners/4.png" alt="NEXT G3N">
-								</a>
-							</li>
-							<li class="partners__item">
-								<a href="" class="partners__link">
-									<img class="partners__img" src="images/partners/5.png" alt="Vintage">
-								</a>
-							</li>
-
-						</ul>
-					</div>
-
-					<div class="parners__box">
-						<ul class="partners__list">
-							<li class="partners__item">
-								<a href="" class="partners__link">
-									<img class="partners__img" src="images/partners/2.png" alt="KMN consalting">
-								</a>
-							</li>
-							<li class="partners__item">
-								<a href="" class="partners__link">
-									<img class="partners__img" src="images/partners/3.png" alt="Chainforce">
-								</a>
-							</li>
-							<li class="partners__item">
-								<a href="" class="partners__link">
-									<img class="partners__img" src="images/partners/4.png" alt="NEXT G3N">
-								</a>
-							</li>
-							<li class="partners__item">
-								<a href="" class="partners__link">
-									<img class="partners__img" src="images/partners/5.png" alt="Vintage">
-								</a>
-							</li>
-							<li class="partners__item">
-								<a href="" class="partners__link">
-									<img class="partners__img partners__img--peterson" src="images/partners/1.png"
-										alt="Peterson Stephanie">
-								</a>
-							</li>
-						</ul>
-					</div>
-
-					<div class="parners__box">
-						<ul class="partners__list">
-							<li class="partners__item">
-								<a href="" class="partners__link">
-									<img class="partners__img" src="images/partners/4.png" alt="NEXT G3N">
-								</a>
-							</li>
-							<li class="partners__item">
-								<a href="" class="partners__link">
-									<img class="partners__img" src="images/partners/5.png" alt="Vintage">
-								</a>
-							</li>
-							<li class="partners__item">
-								<a href="" class="partners__link">
-									<img class="partners__img partners__img--peterson" src="images/partners/1.png"
-										alt="Peterson Stephanie">
-								</a>
-							</li>
-							<li class="partners__item">
-								<a href="" class="partners__link">
-									<img class="partners__img" src="images/partners/2.png" alt="KMN consalting">
-								</a>
-							</li>
-							<li class="partners__item">
-								<a href="" class="partners__link">
-									<img class="partners__img" src="images/partners/3.png" alt="Chainforce">
-								</a>
-							</li>
-						</ul>
-					</div>
-
-				</div>
-			</div>
-		</section>
-
-	</main>
-
-	<footer class="footer">
-	<div class="container">
-
-		<div class="footer-top">
-			<div class="footer-top__item">
-				<a class="logo footer-top__logo" href="#">
-					<img class="logo__img" src="images/logo.png" alt="Logo">
-				</a>
-				<a class="footer-top__link footer-top__link--address" href="#">
-					<span class="footer-top__contacts-name">
-						Address:
-					</span>
-					4772 Wines Lane Houston, TX 77032
-				</a>
-				<a class="footer-top__link footer-top__link--phone" href="tel:+8323475843">
-					<span class="footer-top__contacts-name">
-						Telephone:
-					</span>
-					+832-347-5843
-				</a>
-				<a class="footer-top__link footer-top__link--email" href="#">
-					<span class="footer-top__contacts-name">
-						email:
-					</span>
-					contact@Glee.com
-				</a>
-			</div>
-			<div class="footer-top__item">
-				<h5 class="footer-top__title">
-					<span class="sr-only">list</span>
-					Services
-				</h5>
-				<ul class="footer-top__list">
-					<li class="footer-top__item">
-						<a class="footer-top__link" href="#">
-							About us
-						</a>
-					</li>
-					<li class="footer-top__item">
-						<a class="footer-top__link" href="#">
-							Return Policy
-						</a>
-					</li>
-					<li class="footer-top__item">
-						<a class="footer-top__link" href="#">
-							Our Blog
-						</a>
-					</li>
-					<li class="footer-top__item">
-						<a class="footer-top__link" href="#">
-							Сontact Us
-						</a>
-					</li>
-					<li class="footer-top__item">
-						<a class="footer-top__link" href="#">
-							Terms & Condition
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="footer-top__item">
-				<h5 class="footer-top__title">
-					<span class="sr-only">list</span>
-					Account
-				</h5>
-				<ul class="footer-top__list">
-					<li class="footer-top__item">
-						<a class="footer-top__link" href="#">
-							Your Account
-						</a>
-					</li>
-					<li class="footer-top__item">
-						<a class="footer-top__link" href="#">
-							Checkout
-						</a>
-					</li>
-					<li class="footer-top__item">
-						<a class="footer-top__link" href="#">
-							Login
-						</a>
-					</li>
-					<li class="footer-top__item">
-						<a class="footer-top__link" href="#">
-							Register
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="footer-top__item">
-				<h5 class="footer-top__title">
-					Newsletter
-				</h5>
-				<p class="footer-top__text">
-					Subscribe by our newsletter and get update protidin
-				</p>
-				<form class="footer-top__form">
-					<label class="footer-top__label" for="email"></label>
-					<input class="footer-top__input" id="email" type="email" name="email" placeholder="Email address" required>
-					<button class="footer-top__button" type="submit">Subscribe</button>
-				</form>
-			</div>
-		</div>
-
-		<div class="footer-bottom">
-			<a class="footer-bottom__copy" href="#">
-				©2020 CopyRight Example. All rights reserved.
-			</a>
-			<nav class="footer-bottom__menu">
-				<ul class="footer-bottom__list">
-					<li class="footer-bottom__item">
-						<a class="footer-bottom__link" href="#">Home</a>
-					</li>
-					<li class="footer-bottom__item">
-						<a class="footer-bottom__link" href="#">About</a>
-					</li>
-					<li class="footer-bottom__item">
-						<a class="footer-bottom__link" href="#">Blog</a>
-					</li>
-					<li class="footer-bottom__item">
-						<a class="footer-bottom__link" href="#">Contact</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-</footer>
-
-	<script src="js/main.min.js"></script>
-</body>
-
+    <main class="main">
+      <div class="text">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga autem laboriosam asperiores odit delectus repellat
+          accusamus quas itaque debitis maiores, voluptate, est officiis eum voluptatum culpa praesentium maxime corporis quam,
+          hic qui aperiam eos distinctio iusto? Expedita obcaecati, nam, ipsum neque quas omnis dignissimos laborum voluptate
+          soluta quasi non vero ullam numquam. Minima ipsum fugit, at laboriosam officiis dicta harum? Nesciunt aliquam magnam
+          architecto doloremque minus consequuntur alias, illum doloribus nam placeat nostrum obcaecati suscipit iure repellendus
+          repellat perspiciatis. Nulla ea labore assumenda iste saepe excepturi neque, animi quasi cumque quam, porro at dolore
+          voluptas nisi non repudiandae laudantium doloremque, illum modi. A, quia esse molestiae earum eum magni fuga nam ad
+          eligendi recusandae voluptates natus quidem quis incidunt quas asperiores est cum saepe reiciendis debitis voluptatibus
+          alias aperiam autem quisquam. Quisquam saepe sit quas quam. Ut nemo corrupti itaque illum harum perspiciatis deleniti
+          voluptatum natus mollitia officiis odio ea quo modi animi dolores amet magnam, enim, voluptas culpa? Quisquam et, ipsa,
+          itaque veritatis rem harum culpa, dicta dolor doloribus provident voluptas accusamus! Veniam, laudantium explicabo rerum
+          quas praesentium debitis omnis facere repellat unde enim neque officia, consectetur animi. Tempora non illo sequi
+          impedit incidunt suscipit cupiditate, unde qui debitis.
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque tenetur iusto, nihil harum, ipsum assumenda possimus
+          aspernatur repellat in autem delectus quam? Deleniti ut pariatur modi veritatis expedita aperiam unde commodi doloremque
+          ab facere suscipit quo recusandae, voluptate impedit labore! Distinctio sunt esse soluta cumque illo minima reiciendis
+          officia in autem aliquid qui cum animi harum delectus sed tempore rerum modi magni, nesciunt recusandae nulla mollitia
+          inventore. Iusto, neque aspernatur quo cumque deleniti fugiat blanditiis sapiente id! Deleniti nam magnam molestias quod
+          commodi delectus placeat, numquam cupiditate dolorem, animi, dolorum similique porro quibusdam aut pariatur facilis
+          explicabo in temporibus. Laudantium enim error praesentium mollitia saepe quibusdam tempore sed, totam magnam recusandae
+          cumque? Aut reiciendis expedita voluptate tempore? Et voluptates ab minima. Harum corporis, aperiam ea ad quod eligendi
+          asperiores tenetur veritatis, exercitationem vitae magni quas dolore nostrum libero modi magnam temporibus corrupti
+          molestiae cupiditate. Quo obcaecati ullam, id magni dicta assumenda. At officia dignissimos vero neque perferendis.
+          Dolore animi recusandae eaque iusto vero sint aperiam corrupti amet doloremque ipsum, adipisci repellendus magnam hic
+          voluptas facilis ducimus. Cupiditate cum ipsam labore obcaecati similique officiis rerum architecto nihil adipisci
+          dignissimos est ducimus unde assumenda aliquam repellendus, doloribus dolore impedit maxime itaque neque laboriosam
+          exercitationem nemo laudantium non. Vel voluptatem hic eum pariatur! Possimus non cum voluptate neque necessitatibus,
+          repellat pariatur. Repudiandae illum nam, asperiores tempora modi voluptatibus ad repellendus, repellat provident eum,
+          mollitia ipsum et impedit facere nihil beatae deserunt cumque fugit necessitatibus sapiente minima nemo assumenda? At,
+          temporibus mollitia, eius distinctio ut facere, labore incidunt unde odio corrupti rerum hic! Esse nesciunt, officia
+          laudantium laborum, molestiae enim porro temporibus reprehenderit ad dolorem fuga asperiores sint aut, qui distinctio
+          obcaecati velit commodi. Quis, delectus voluptatibus. Sapiente reprehenderit autem repellendus expedita impedit, dolorem
+          dignissimos, quaerat id hic amet voluptatem dolore? Tempora at hic eveniet placeat qui ipsum perferendis eos distinctio
+          rerum rem optio vero reprehenderit fuga, sit ad repudiandae unde enim deserunt, debitis dicta iste maiores architecto
+          provident. Eveniet officiis illo dolorem in similique perferendis sequi quia praesentium veniam culpa, officia earum
+          quisquam eum nostrum quaerat expedita nesciunt deserunt. Voluptate suscipit soluta quo perspiciatis, repellat quod sint
+          aliquid. Odio itaque vel quo accusantium ab eum voluptas at libero ratione, ducimus, voluptatum alias. Possimus
+          praesentium beatae ut. Cupiditate provident adipisci nostrum harum odit? Numquam magni reprehenderit eligendi porro
+          dolorem quis repellat amet distinctio at eius aliquam officiis voluptate doloribus laboriosam commodi itaque molestias
+          voluptatum optio, delectus eveniet nam eos inventore aspernatur autem. Quas odio numquam corrupti officia libero porro?
+          Quasi illo explicabo veritatis fuga voluptatem qui molestiae ipsam eum optio nihil odio tempora similique molestias at,
+          natus fugit velit, iste, sequi corrupti. Similique, recusandae natus! Molestias harum repellendus corrupti voluptatum
+          modi, laborum saepe asperiores mollitia dignissimos perspiciatis explicabo suscipit tempore, delectus minima aspernatur
+          praesentium excepturi ad maxime dicta sequi illo! Non magnam cupiditate dolorem repudiandae ducimus perspiciatis quia
+          corporis inventore! Suscipit, atque. Odio, delectus velit? Sequi ipsam ipsum tenetur vitae reprehenderit atque ullam!
+          Perferendis ipsa suscipit asperiores! Veniam nobis laborum aliquid dolorem ipsam nulla eligendi quo perspiciatis quam
+          consequuntur voluptatem distinctio dolores dignissimos molestias, vel vero similique enim sed quis molestiae at magni!
+          Perferendis soluta ducimus ipsam minus dolorum. Ad enim culpa quae in quia consectetur soluta maiores earum nostrum
+          eveniet doloribus, dolor reprehenderit eaque ab nesciunt placeat, provident exercitationem! Ex adipisci at, id sapiente
+          soluta porro doloribus, ad possimus in mollitia totam ipsa et vel nihil reiciendis, facere magnam dolor autem! Impedit
+          accusantium molestias aliquid, ex fugit culpa magnam rerum temporibus exercitationem cumque assumenda cupiditate
+          voluptate omnis minima cum doloribus rem quas eaque aliquam eum blanditiis, iure accusamus. Optio mollitia doloribus
+          fuga laboriosam vitae enim, nam consequatur sed delectus doloremque possimus dicta, vel quam, deleniti perferendis velit
+          eligendi unde. Vitae corporis dolor ad molestias expedita id porro? Distinctio tempora omnis fugit sapiente ducimus
+          ullam dolorum doloremque repellendus odio, cumque repudiandae fugiat! Quas ad maxime voluptatem iure quod libero amet
+          rerum vel repudiandae, accusamus eos officia hic velit corrupti, saepe laborum ab eum voluptatum vitae sit sed! Voluptas
+          eaque sapiente deserunt sequi, ullam optio vel facilis eos natus odit eius impedit dolorem esse aut itaque expedita
+          molestiae enim temporibus, iste error! Ducimus, dicta minus nemo commodi mollitia aliquid perferendis esse aliquam
+          doloremque earum animi beatae sapiente suscipit nam, sunt illo quod tempora exercitationem pariatur possimus! Atque
+          temporibus voluptatibus excepturi veritatis porro ratione laboriosam officiis aliquid molestias reiciendis. Molestiae
+          expedita adipisci hic delectus consectetur ullam, aliquid nam inventore ea dolore consequatur rem dolores reiciendis
+          accusantium placeat. Commodi aperiam quo, perferendis praesentium maxime totam laudantium, quidem dolorum beatae eaque
+          quaerat tempora eveniet saepe consectetur inventore itaque libero. Distinctio saepe tempore, omnis autem quos fugit
+          ducimus, repudiandae optio recusandae asperiores doloremque illo iure temporibus possimus quasi animi delectus qui,
+          nostrum sequi natus. Sunt nam tenetur cum, vel libero accusantium nostrum quis deserunt temporibus fugit maiores eum
+          atque nemo delectus sit, ad at? Labore quas earum illum natus ducimus cupiditate dolorem explicabo nostrum consequuntur,
+          adipisci maiores laudantium id ullam excepturi quisquam, quaerat tempore? Dolore quasi excepturi quo, consectetur
+          tenetur omnis molestias facere soluta! Assumenda voluptatibus ipsam cumque modi iusto inventore tempora earum enim
+          numquam sapiente optio ducimus doloribus architecto tempore neque, aspernatur consequuntur id? Libero, quae blanditiis.
+          Praesentium, repellat labore! Numquam labore modi architecto tempore accusamus quod facere libero cum itaque delectus
+          magni dolorum, doloremque aperiam aliquid non molestiae tenetur suscipit repudiandae distinctio ut illo ullam. Rem
+          laborum officiis iste, quibusdam nesciunt dolorem nulla quisquam nemo aliquam quidem. Eligendi tempore doloribus veniam?
+          Expedita praesentium at nemo numquam vitae alias neque unde quo vero dolores non harum dolor consequuntur incidunt quam
+          velit asperiores nulla hic illum, animi culpa. Laborum porro eaque iure repellat, ducimus veritatis rerum, excepturi,
+          quos vitae cumque quas illum molestias architecto quaerat modi eius voluptates consequatur accusantium nobis quo
+          adipisci obcaecati? Eligendi voluptate quis reiciendis repudiandae optio fuga eius! Inventore rem ratione officia quae
+          deleniti non sunt nam? Natus iusto repellat totam facilis. Nisi similique voluptatibus quisquam magni illo natus.
+          Temporibus qui adipisci blanditiis? Doloremque velit ut deleniti exercitationem id perferendis error nobis, fugiat
+          recusandae ratione?
+        </p>
+      </div>
+      
+    
+      
+      
+      
+      
+    </main>
+    
+    <script src="js/main.min.js"></script>
+  </body>
 </html>

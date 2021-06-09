@@ -16,6 +16,10 @@ $(function(){
 		autoplaySpeed: 2500
 	});
 
+	$('.menu__button').on('click', function(){
+		$('.menu__list').toggleClass('menu__list--active')
+	});
+
 	let container_gallery = document.querySelector('[data-ref="gallery"]');
   let container_design = document.querySelector('[data-ref="design"]');
 
