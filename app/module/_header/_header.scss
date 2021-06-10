@@ -33,9 +33,9 @@
 }
 
 .menu {
-	transform: translate(75px, -3px);
 	position: relative;
 	z-index: 3;
+	transform: translate(-30px, -4px);
 
 	&__button {
 		display: none;
