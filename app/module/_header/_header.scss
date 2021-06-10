@@ -14,8 +14,7 @@
 		top: 0;
 		left: 0;
 		z-index: 2;
-		// background-color: $white;
-		background-color: tomato;
+		background-color: $white;
 	}
 
 	&__navigation {
@@ -24,8 +23,6 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
-		// position: relative;
-		// z-index: 3;
 	}
 }
 
@@ -54,22 +51,19 @@
 	}
 
 	&__item {
-		
 		&:not(:last-child) {
 			margin-right: 34px;
 		}
 	}
 
 	&__link {
+		display: block;
 		@extend %rubik-500;
 		font-size: 15px;
 		line-height: 1;
 		color: $navy-400;
-		transition: color 0.5s;
-		@include scalehover(1.1, 0.5s);
+		@extend %linkBehavior;
 
-		&:focus,
-		&:hover,
 		&--active {
 			color: $black-800;
 		}
@@ -85,96 +79,84 @@
 	z-index: 3;
 	margin-left: 50px;
 
-		&__item {
-			display: flex;
-			max-width: 51px;
-			width: 100%;
-			min-height: 52px;
-			align-items: center;
-			justify-content: center;
-			border-radius: 50%;
-			transition: background-color 0.5s ;
-			background-color: $grey-200;
+	&__item {
+		display: flex;
+		max-width: 51px;
+		width: 100%;
+		min-height: 52px;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		transition: background-color 0.5s;
+		background-color: $grey-200;
 
-			&--search {
-				margin-right: 21px;
-
-				&:hover {
-					background-color: $grey-400;
-				}
-			}
-
-			&--heart {
-				max-width: 90px;
-				border-radius: 45px 0 0 45px;
-				background-color: $pink-500;
-				position: relative;
-			}
-
-			&--cart {
-				max-width: 90px;
-				border-radius: 0 45px 45px 0;
-				background-color: $pink-500;
-				position: relative;
-				margin-right: 18px;
-			}
-
-			&--button {
-
-				&:hover {
-					background-color: $grey-400;
-				}
-			} 
-
-			&:hover {
-				.user-nav__img {
-					fill: $white;
-				}
-			}
+		&--search {
+			margin-right: 21px;
 		}
 
-		&__num {
-			max-width: 40px;
-			min-height: 16px;
-			border-radius: 10px;
-			text-align: center;
-			font-size: 10px;
-			padding: 0 6px;
-			position: absolute;
-			top: 10px;
-			left: 50px;
-			color: $navy-600;
-			background-color: $white;
-		}
-		
-		&__img {
-			max-width: 24px;
-			width: 100%;
-			height: 24px;
-			fill: $navy-600;
-			transition: fill 0.5s;
+		&--heart {
+			max-width: 90px;
+			border-radius: 45px 0 0 45px;
+			background-color: $pink-500;
+			position: relative;
 		}
 
-		&::after {
-			content: '';
-			max-width: 1px;
-			width: 100%;
-			min-height: 32px;
-			background-color: $white;
-			position: absolute;
-			top: 50%;
-			right: 158px;
-			transform: translate(0, -50%);
+		&--cart {
+			max-width: 90px;
+			border-radius: 0 45px 45px 0;
+			background-color: $pink-500;
+			position: relative;
+			margin-right: 18px;
 		}
-}
 
-.text {
-	padding: 150px 50px 0;
-	// display: none;
+		&--search,
+		&--button {
+			@include backgroundColorHover($grey-400, 0.5s);
+		}
+
+		&:hover {
+			.user-nav__img {
+				fill: $white;
+			}
+		}
+	}
+
+	&__num {
+		max-width: 40px;
+		min-height: 16px;
+		border-radius: 10px;
+		text-align: center;
+		font-size: 10px;
+		padding: 0 6px;
+		position: absolute;
+		top: 10px;
+		left: 50px;
+		color: $navy-600;
+		background-color: $white;
+	}
+
+	&__img {
+		max-width: 24px;
+		width: 100%;
+		height: 24px;
+		fill: $navy-600;
+		transition: fill 0.5s;
+	}
+
+	&::after {
+		content: "";
+		max-width: 1px;
+		width: 100%;
+		min-height: 32px;
+		background-color: $white;
+		position: absolute;
+		top: 50%;
+		right: 156px;
+		transform: translate(0, -50%);
+	}
 }
 
 @media (max-width: $screen-xl) {
-
 	.header {
 		padding-bottom: 30px;
 	}
@@ -186,32 +168,27 @@
 		transform: translate(0, 0);
 		order: 1;
 		margin-top: 30px;
-		
+
 		&__list {
 			justify-content: center;
 		}
 	}
-	
+
 	.user-nav {
 		margin-left: auto;
 	}
 }
 
 @media (max-width: $screen-lg) {
-
-	.menu {
-
-		&__list{
-		
-		}
-	}
 }
 
 @media (max-width: $screen-md) {
-	
+	body.lock {
+		overflow: hidden;
+	}
+
 	.header {
-	padding: 10px 0 10px;
-		
+		padding: 10px 0 10px;
 	}
 
 	.menu {
@@ -221,23 +198,22 @@
 		margin: 0;
 		top: 0;
 		left: 0;
+		overflow: auto;
 		z-index: 1;
-		// z-index: 2;
 
 		&__list {
 			max-width: 100%;
-			min-height: 100vh;
+			min-height: 100%;
 			flex-direction: column;
 			justify-content: start;
-			// background-color: $white;
-			padding-top: 150px;
-			background-color: cornflowerblue;
+			background-color: $white;
+			padding-top: 140px;
 			transform: translateY(-200%);
-			transition: transform 0.3s;
+			transition: transform 0.5s;
 
-			&.menu__list--active {
+			&.active {
 				transform: translateY(0%);
-				transition: transform 0.3s;
+				transition: transform 0.5s;
 			}
 		}
 
@@ -259,57 +235,85 @@
 			margin: 0;
 		}
 
-		&__button {
-			width: 30px;
-			height: 24px;
-			border: none;
+		&__button-wrapper {
+			max-width: 50px;
+			width: 100%;
+			min-height: 50px;
 			display: block;
+			border: none;
+			padding: 10px 13px;
 			background-color: transparent;
-			position: absolute;
-			top: 18px;
-			right: 35px;
+			position: relative;
 			z-index: 3;
+			padding: 15px 10px;
+		}
+
+		&__button {
+			display: block;
+			max-width: 30px;
+			width: 100%;
+			min-height: 21px;
+			cursor: pointer;
+			position: relative;
 			padding: 0;
 			margin: 0;
-			
+
 			&:before,
 			&:after {
 				content: "";
 				position: absolute;
 				width: 100%;
 				height: 3px;
-				background-color: $black-800;
+				right: 0;
+				background-color: $navy-400;
+				transition: transform 0.5s, top 0.5s;
 			}
-			
+
 			&::before {
 				top: 0;
 			}
-			
+
 			&::after {
 				bottom: 0;
 			}
-			
+
 			&--middle {
 				width: 100%;
 				height: 3px;
 				position: absolute;
-				top: 10px;
-				background-color: $black-800;
+				top: 9px;
+				right: 0;
+				background-color: $navy-400;
+			}
+
+			&.active {
+				&::before {
+					transform: rotate(45deg);
+					top: 9px;
+					transition: transform 0.3s;
+				}
+
+				&::after {
+					transform: rotate(-45deg);
+					bottom: 9px;
+					transition: transform 0.3s;
+				}
+
+				&.menu__button .menu__button--middle {
+					height: 0;
+				}
 			}
 		}
 	}
-	
+
 	.user-nav {
 		max-width: 100%;
 		justify-content: flex-end;
 		margin-top: 10px;
-		// position: relative;
-		// z-index: -1;
 	}
 }
 
 @media (max-width: $screen-xm) {
-
 	.user-nav {
 		display: none;
 	}

@@ -18,7 +18,7 @@
 	&__articles {
 		display: flex;
 		align-items: center;
-		@include scalehover(1.1, 0.5s);
+		@include scaleHover(1.1, 0.5s);
 	}
 
 	&__articles-link {
@@ -27,7 +27,7 @@
 		line-height: 1.2;
 		color: $navy-500;
 	}
-	
+
 	&__articles-arrow {
 		content: url("../images/sprite.svg#news_arrow");
 		max-width: 14px;
@@ -53,7 +53,7 @@
 
 	&__imglink {
 		display: block;
-		@include scalehover(1.1, 0.5s);
+		@include scaleHover(1.1, 0.5s);
 	}
 
 	&__img {
@@ -65,7 +65,6 @@
 		background-size: cover;
 	}
 
-	
 	&__content {
 		width: 100%;
 		min-height: 170px;
@@ -94,7 +93,7 @@
 		padding: 5px 5px;
 		top: -15px;
 		left: 28px;
-		@include scalehover(1.1, 0.5s);
+		@include scaleHover(1.1, 0.5s);
 	}
 
 	&__preview {
@@ -104,7 +103,7 @@
 		line-height: 1.2;
 		color: $navy-500;
 		@include lineclamp(60px, 3);
-		@include scalehover(1.1, 0.5s);
+		@include scaleHover(1.1, 0.5s);
 	}
 
 	&__info {
@@ -127,7 +126,7 @@
 	&__date {
 		display: flex;
 		align-items: baseline;
-		@include scalehover(1.1, 0.5s);
+		@include scaleHover(1.1, 0.5s);
 
 		&--icon {
 			content: url("../images/sprite.svg#calendar");
@@ -135,7 +134,7 @@
 			width: 100%;
 			min-height: 14px;
 		}
-	
+
 		&--text {
 			display: inline-block;
 			margin-left: 6px;
@@ -146,7 +145,7 @@
 	&__author {
 		display: flex;
 		align-items: baseline;
-		@include scalehover(1.1, 0.5s);
+		@include scaleHover(1.1, 0.5s);
 
 		&--icon {
 			content: url("../images/sprite.svg#user");
@@ -154,7 +153,7 @@
 			width: 100%;
 			min-height: 14px;
 		}
-	
+
 		&--text {
 			display: inline-block;
 			margin-left: 6px;

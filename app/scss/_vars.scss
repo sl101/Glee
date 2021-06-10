@@ -1,68 +1,68 @@
-@import 'mixin';
+@import "mixin";
 
 $black-800: #1a1a1a;
 $black-700: #191919;
-$blue-700:  #1f2044;
-$navy-600:  #243f4d;
-$navy-550:  rgba(37, 37, 37, 0.05);
-$navy-500:  #262626;
-$navy-400:  #436372;
-$grey-800:  #414141;
-$grey-700:  #585858;
-$grey-600:  #7b7b7b;
-$grey-500:  #8b8b8b;
-$grey-450:  rgba(163, 187, 200, 0.3);
-$grey-400:  #a3bbc8;
-$grey-300:  #e8e4df;
-$grey-250:  #e0e0e0;
-$grey-200:  #edf1f4;
-$grey-100:  #f8f8f8;
-$pink-550:  rgba(252, 215, 182, 0.2);
-$pink-500:  #fcd7b6;
-$pink-400:  #fde3cc;
-$pink-350:  rgba(254, 239, 226, 0.4);
-$pink-200:  #fff7f0;
-$white:     #ffffff;
+$blue-700: #1f2044;
+$navy-600: #243f4d;
+$navy-550: rgba(37, 37, 37, 0.05);
+$navy-500: #262626;
+$navy-400: #436372;
+$grey-800: #414141;
+$grey-700: #585858;
+$grey-600: #7b7b7b;
+$grey-500: #8b8b8b;
+$grey-450: rgba(163, 187, 200, 0.3);
+$grey-400: #a3bbc8;
+$grey-300: #e8e4df;
+$grey-250: #e0e0e0;
+$grey-200: #edf1f4;
+$grey-100: #f8f8f8;
+$pink-550: rgba(252, 215, 182, 0.2);
+$pink-500: #fcd7b6;
+$pink-400: #fde3cc;
+$pink-350: rgba(254, 239, 226, 0.4);
+$pink-200: #fff7f0;
+$white: #ffffff;
+$red: red;
 
-$screen-xm:  480px;
+$screen-xm: 480px;
 // $screen-sm:  576px;
-$screen-md:  768px;
-$screen-lg:  992px;
+$screen-md: 768px;
+$screen-lg: 992px;
 $screen-xl: 1200px;
 
-
-%myriadpro-400{
-	font-family: 'MyriadPro', sans-serif; 
+%myriadpro-400 {
+	font-family: "MyriadPro", sans-serif;
 	font-weight: 400;
 }
 
-%rubik-500{
-	font-family: 'Rubik', sans-serif;
+%rubik-500 {
+	font-family: "Rubik", sans-serif;
 	font-weight: 500;
 }
 
-%rubik-400{
-	font-family: 'Rubik', sans-serif;
+%rubik-400 {
+	font-family: "Rubik", sans-serif;
 	font-weight: 400;
 }
 
-%poppins-700{
-	font-family: 'Poppins', sans-serif;
+%poppins-700 {
+	font-family: "Poppins", sans-serif;
 	font-weight: 700;
 }
 
-%dmsans-700{
-	font-family: 'DMSans', sans-serif;
+%dmsans-700 {
+	font-family: "DMSans", sans-serif;
 	font-weight: 700;
 }
 
-%dmsans-500{
-	font-family: 'DMSans', sans-serif;
+%dmsans-500 {
+	font-family: "DMSans", sans-serif;
 	font-weight: 500;
 }
 
-%dmsans-400{
-	font-family: 'DMSans', sans-serif;
+%dmsans-400 {
+	font-family: "DMSans", sans-serif;
 	font-weight: 400;
 }
 
@@ -71,7 +71,7 @@ $screen-xl: 1200px;
 	max-width: 150px;
 	width: 100%;
 	min-height: 39px;
-	@include scalehover(1.1, 0.5s);
+	@include scaleHover(1.1, 0.5s);
 }
 
 %title {
@@ -130,4 +130,18 @@ $screen-xl: 1200px;
 }
 @function min($numbers...) {
 	@return m#{i}n(#{$numbers});
+}
+
+%linkBehavior {
+	&:hover {
+		@include colorScaleHover(1.1, $navy-600, 0.5s);
+	}
+
+	&:focus {
+		color: $navy-600;
+	}
+
+	&:active {
+		color: $black-800;
+	}
 }

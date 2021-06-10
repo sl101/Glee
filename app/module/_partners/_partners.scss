@@ -19,14 +19,14 @@
 
 	&__link {
 		display: inline-block;
-		@include scalehover(1.1, 0.5s);
+		@include scaleHover(1.1, 0.5s);
 	}
 
 	&__img {
 		max-width: 167px;
 		min-height: 48px;
 		filter: brightness(80%);
-		filter: contrast(30%); 
+		filter: contrast(30%);
 
 		&--peterson {
 			filter: opacity(60%);

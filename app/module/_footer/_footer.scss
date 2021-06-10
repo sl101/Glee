@@ -30,10 +30,10 @@
 			color: $grey-600;
 			margin-bottom: 10px;
 			transition: color 0.5s;
-			@include scalehover(1.1, 0.5s);
-			
+			@include scaleHover(1.1, 0.5s);
+
 			&--address {
-				max-width: 200px;	
+				max-width: 200px;
 			}
 
 			&:hover {
@@ -109,10 +109,10 @@
 			max-width: 770px;
 			@extend %rubik-400;
 			@include lineclamp(45px, 2);
-			@include scalehover(1.1, 0.5s);
+			@include scaleHover(1.1, 0.5s);
 			font-size: 14px;
 			line-height: 1.5;
-			color:$grey-600;
+			color: $grey-600;
 		}
 
 		&__list {
@@ -138,7 +138,7 @@
 			line-height: 2.3;
 			color: $grey-600;
 			transition: color 0.5s;
-			@include scalehover(1.1, 0.5s);
+			@include scaleHover(1.1, 0.5s);
 
 			&:hover {
 				color: $grey-800;

@@ -1,4 +1,3 @@
-
 .design {
 	padding: 100px 0 60px;
 
@@ -31,14 +30,13 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-	
-		&__unit {
 
+		&__unit {
 			&:not(:last-child) {
 				margin-right: 27px;
 			}
 		}
-		
+
 		&__btn {
 			@extend %dmsans-700;
 			font-size: 16px;
@@ -46,7 +44,7 @@
 			background-color: transparent;
 			color: $grey-500;
 			transition: color 0.5s;
-			@include scalehover(1.1, 0.5s);
+			@include scaleHover(1.1, 0.5s);
 
 			&:focus,
 			&:hover,
@@ -58,12 +56,11 @@
 	}
 
 	.design-card {
-	
 		&__link {
 			@extend %dmsans-700;
 			line-height: 1.2;
 		}
-			
+
 		&__image {
 			max-width: 370px;
 			width: 100%;
@@ -72,7 +69,7 @@
 			background-size: cover;
 			background-position: center;
 			padding: 38px 5px 5px 36px;
-			@include scalehover(1.1, 0.5s);
+			@include scaleHover(1.1, 0.5s);
 		}
 
 		&__title {
@@ -81,7 +78,7 @@
 			color: $black-800;
 			margin-bottom: 12px;
 		}
-	
+
 		&__type {
 			font-size: 16px;
 			color: $grey-400;

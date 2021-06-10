@@ -17,7 +17,15 @@ $(function(){
 	});
 
 	$('.menu__button').on('click', function(){
-		$('.menu__list').toggleClass('menu__list--active')
+		$('.menu__list, .menu__button').toggleClass('active');
+		$('.header__wrapper').toggleClass('header__wrapper--active');
+		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			$('body').toggleClass('lock');
+		} else {
+			var scrollWidth = window.innerWidth-document.documentElement.clientWidth;
+			$('body').toggleClass('lock');
+			$('body, .header').css('padding-right', scrollWidth);
+		} 
 	});
 
 	let container_gallery = document.querySelector('[data-ref="gallery"]');

@@ -25,15 +25,14 @@
 	}
 
 	.filter {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 
 		&__unit {
-
 			&:not(:last-child) {
 				margin-right: 27px;
-				}
+			}
 		}
 
 		&__btn {
@@ -43,7 +42,7 @@
 			background-color: transparent;
 			color: $grey-500;
 			transition: color 0.5s;
-			@include scalehover(1.1, 0.5s);
+			@include scaleHover(1.1, 0.5s);
 
 			&:focus,
 			&:hover,
@@ -51,7 +50,7 @@
 			&.mixitup-control-active {
 				color: $black-800;
 			}
-		}	
+		}
 	}
 
 	.card {
@@ -75,7 +74,6 @@
 			margin: 0 auto;
 
 			&:hover {
-
 				.card__icons-box {
 					z-index: 1;
 					bottom: 25px;
@@ -88,10 +86,10 @@
 			min-height: 135px;
 		}
 
-		&__image{
+		&__image {
 			width: 100%;
 			object-fit: cover;
-			@include scalehover(1.1, 0.5s);
+			@include scaleHover(1.1, 0.5s);
 		}
 
 		&__icons-box {
@@ -152,7 +150,7 @@
 			@include lineclamp(33px, 1);
 			@extend %dmsans-500;
 			color: $navy-600;
-			@include scalehover(1.1, 0.5s);
+			@include scaleHover(1.1, 0.5s);
 
 			&:hover {
 				color: $grey-800;
@@ -171,98 +169,98 @@
 	}
 
 	.sale {
-	padding: 45px 0 80px;
+		padding: 45px 0 80px;
 
-	&__list {
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-	}
-	
-	.sale-card {
-		max-width: 870px;
-		width: 100%;
-		min-height: 390px;
-		display: flex;
-		align-items: flex-end;
-		justify-content: center;
-		position: relative;
-		left: -17px;
+		&__list {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
 
-		&::after {
-			content: "";
+		.sale-card {
 			max-width: 870px;
 			width: 100%;
 			min-height: 390px;
-			position: absolute;
-			z-index: -1;
-			top: 97px;
-			bottom: 0;
-			left: 17px;
-			right: 0;
-			background-color: $pink-350;
-		}
-
-		&__link {
-			display: block;
-			max-width: 233px;
-			min-height: 405px;
-		}
-
-		&__img {
-			width: 100%;
-			object-fit: cover;
-			@include scalehover(1.1, 0.5s);
-		}
-
-		&__content {
-			min-height: 197px;
 			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
+			align-items: flex-end;
+			justify-content: center;
 			position: relative;
-			bottom: 15px;
-			left: 20px;
+			left: -17px;
 
-			&--elit {
-			min-height: 220px;
-			position: relative;
-			left: 65px;
-			top: -4px;
+			&::after {
+				content: "";
+				max-width: 870px;
+				width: 100%;
+				min-height: 390px;
+				position: absolute;
+				z-index: -1;
+				top: 97px;
+				bottom: 0;
+				left: 17px;
+				right: 0;
+				background-color: $pink-350;
+			}
+
+			&__link {
+				display: block;
+				max-width: 233px;
+				min-height: 405px;
+			}
+
+			&__img {
+				width: 100%;
+				object-fit: cover;
+				@include scaleHover(1.1, 0.5s);
+			}
+
+			&__content {
+				min-height: 197px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				position: relative;
+				bottom: 15px;
+				left: 20px;
+
+				&--elit {
+					min-height: 220px;
+					position: relative;
+					left: 65px;
+					top: -4px;
+				}
+			}
+
+			&__title {
+				max-width: 250px;
+				@extend %dmsans-700;
+				font-size: 26px;
+				line-height: 1.2;
+				color: $navy-600;
+				@include scaleHover(1.1, 0.5s);
+			}
+
+			&__text {
+				max-width: 330px;
+				@include lineclamp(65px, 2);
+				@extend %rubik-400;
+				font-size: 16px;
+				line-height: 1.9;
+				color: $navy-600;
+			}
+
+			&__btn {
+				@extend %btn;
+				max-width: 180px;
+				width: 100%;
+				min-height: 60px;
+				background-color: transparent;
+				border: 1px solid $navy-400;
+				border-radius: 5px;
+			}
+
+			&__arrow {
+				@extend %btn-arrow;
 			}
 		}
-
-		&__title {
-			max-width: 250px;
-			@extend %dmsans-700;
-			font-size: 26px;
-			line-height: 1.2;
-			color: $navy-600;
-			@include scalehover(1.1, 0.5s);
-		}
-
-		&__text {
-			max-width: 330px;
-			@include lineclamp(65px, 2);
-			@extend %rubik-400;
-			font-size: 16px;
-			line-height: 1.9;
-			color: $navy-600;
-		}
-
-		&__btn {
-			@extend %btn;
-			max-width: 180px;
-			width: 100%;
-			min-height: 60px;
-			background-color: transparent;
-			border:1px solid $navy-400;
-			border-radius: 5px;
-		}
-
-		&__arrow {
-			@extend %btn-arrow;
-		}
-	}
 	}
 }

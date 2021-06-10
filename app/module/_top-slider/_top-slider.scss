@@ -16,7 +16,7 @@
 		position: relative;
 
 		&::after {
-			content:  url("../images/circle.png");
+			content: url("../images/circle.png");
 			max-width: 622px;
 			width: 100%;
 			min-height: 634px;
@@ -37,13 +37,13 @@
 		max-width: 411px;
 		width: 100%;
 		@extend %rubik-500;
-		@include lineclamp(147px,2);
+		@include lineclamp(147px, 2);
 		font-size: 72px;
 		line-height: 1;
 		text-transform: uppercase;
 		color: $navy-600;
 		margin-bottom: 25px;
-		@include scalehover(1.1, 0.5s);
+		@include scaleHover(1.1, 0.5s);
 	}
 
 	&__text {
@@ -53,7 +53,7 @@
 		line-height: 1.6;
 		color: $navy-400;
 		margin-bottom: 47px;
-		@include lineclamp(47px,2);
+		@include lineclamp(47px, 2);
 	}
 
 	&__btn {
@@ -79,7 +79,6 @@
 		padding-bottom: 42px;
 
 		li {
-
 			button {
 				width: 30px;
 				height: 29px;
@@ -99,7 +98,6 @@
 			}
 
 			&.slick-active {
-
 				button {
 					color: $navy-600;
 					background-color: $white;
@@ -115,7 +113,6 @@
 }
 
 .advantages {
-
 	&__items {
 		display: flex;
 		flex-wrap: wrap;
@@ -178,7 +175,7 @@
 		}
 
 		&--delivery {
-				padding-left: 58px;
+			padding-left: 58px;
 
 			&::before {
 				content: url("../images/sprite.svg#delivery");
@@ -195,7 +192,7 @@
 		}
 
 		&--payment {
-			max-width:310px;
+			max-width: 310px;
 			padding-left: 90px;
 			padding-top: 12px;
 
@@ -212,18 +209,17 @@
 				left: 38px;
 			}
 		}
-
 	}
 
 	&__subtitle {
 		max-width: 200px;
 		@extend %dmsans-700;
-		@include lineclamp(18px,1);
+		@include lineclamp(18px, 1);
 		font-size: 18px;
 		line-height: 1;
 		color: $grey-800;
 		margin-bottom: 8px;
-		@include scalehover(1.1, 0.5s);
+		@include scaleHover(1.1, 0.5s);
 	}
 
 	&__text {

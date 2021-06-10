@@ -1,4 +1,4 @@
-@mixin lineclamp ($height, $lines){
+@mixin lineclamp($height, $lines) {
 	display: -webkit-box;
 	height: $height;
 	-webkit-line-clamp: $lines;
@@ -7,10 +7,27 @@
 	text-overflow: ellipsis;
 }
 
-@mixin scalehover ($scale, $time){
-	transition: transform 0.5s;
-	
+@mixin scaleHover($scale, $time) {
+	transition: transform $time;
+
 	&:hover {
-		transform: scale(1.1);
+		transform: scale($scale);
+	}
+}
+
+@mixin backgroundColorHover($color, $time) {
+	transition: background-color $time;
+
+	&:hover {
+		background-color: $color;
+	}
+}
+
+@mixin colorScaleHover($scale, $color, $time) {
+	transition: transform $time, color $time;
+
+	&:hover {
+		transform: scale($scale);
+		color: $color;
 	}
 }
