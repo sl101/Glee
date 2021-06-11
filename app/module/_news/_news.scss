@@ -22,6 +22,7 @@
 	}
 
 	&__articles-link {
+		display: block;
 		@extend %dmsans-700;
 		font-size: 16px;
 		line-height: 1.2;
@@ -29,11 +30,9 @@
 	}
 
 	&__articles-arrow {
-		content: url("../images/sprite.svg#news_arrow");
-		max-width: 14px;
-		width: 100%;
-		min-height: 14px;
-		margin-left: 28px;
+		width: 15px;
+		height: 15px;
+		margin-left: 20px;
 	}
 
 	&__list {
@@ -93,7 +92,7 @@
 		padding: 5px 5px;
 		top: -15px;
 		left: 28px;
-		@include scaleHover(1.1, 0.5s);
+		cursor: default;
 	}
 
 	&__preview {
@@ -111,7 +110,7 @@
 		width: 100%;
 		min-height: 59px;
 		display: flex;
-		justify-self: start;
+		justify-content: flex-start;
 		text-align: center;
 		align-items: center;
 		padding: 0;
@@ -123,40 +122,19 @@
 		text-transform: uppercase;
 	}
 
-	&__date {
+	&__description {
 		display: flex;
 		align-items: baseline;
 		@include scaleHover(1.1, 0.5s);
 
-		&--icon {
-			content: url("../images/sprite.svg#calendar");
-			max-width: 14px;
-			width: 100%;
-			min-height: 14px;
-		}
-
-		&--text {
-			display: inline-block;
-			margin-left: 6px;
+		&--date {
 			margin-right: 31px;
 		}
 	}
 
-	&__author {
-		display: flex;
-		align-items: baseline;
-		@include scaleHover(1.1, 0.5s);
-
-		&--icon {
-			content: url("../images/sprite.svg#user");
-			max-width: 14px;
-			width: 100%;
-			min-height: 14px;
-		}
-
-		&--text {
-			display: inline-block;
-			margin-left: 6px;
-		}
+	&__icon {
+		width: 14px;
+		height: 14px;
+		margin-right: 6px;
 	}
 }
