@@ -6,8 +6,8 @@
 	}
 
 	&__title {
-		@extend %title;
 		text-align: center;
+		color: $black-700;
 		padding: 0 10px;
 		margin-bottom: 20px;
 	}
@@ -37,7 +37,7 @@
 	}
 
 	&__btn {
-		@extend %dmsans-700;
+		@include DMSans(700);
 		font-size: 16px;
 		line-height: 1.2;
 		background-color: transparent;
@@ -143,13 +143,12 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		font-size: 16px;
 		line-height: 2;
 	}
 
 	&__title {
-		@include lineclamp(33px, 1);
-		@extend %dmsans-500;
+		@include line-clamp(1);
+		@include DMSans(500);
 		color: $navy-600;
 		@include scaleHover(1.1, 0.5s);
 
@@ -159,12 +158,12 @@
 	}
 
 	&__curency {
-		@extend %dmsans-700;
-		font-size: 16px;
+		@include DMSans(700);
+		@include line-clamp(1);
 	}
 
 	&__price {
-		@extend %dmsans-700;
+		@include DMSans(700);
 		color: $grey-400;
 	}
 }
@@ -234,33 +233,27 @@
 
 	&__title-link {
 		max-width: 250px;
-		@extend %dmsans-700;
+		@include DMSans(700);
 		font-size: 26px;
 		line-height: 1.2;
+		@include line-clamp();
 		color: $navy-600;
 		@include scaleHover(1.1, 0.5s);
 	}
 
 	&__text {
 		max-width: 330px;
-		@include lineclamp(65px, 2);
-		@extend %rubik-400;
+		@include line-clamp(2);
+		@include Rubik(400);
 		font-size: 16px;
 		line-height: 1.9;
 		color: $navy-600;
 	}
 
 	&__btn {
-		@extend %btn;
 		max-width: 180px;
-		width: 100%;
-		min-height: 60px;
 		background-color: transparent;
 		border: 1px solid $navy-400;
 		border-radius: 5px;
-	}
-
-	&__arrow {
-		@extend %btn-arrow;
 	}
 }

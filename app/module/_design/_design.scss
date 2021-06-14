@@ -6,7 +6,6 @@
 	}
 
 	&__title {
-		@extend %title;
 		text-align: center;
 		padding: 0 10px;
 		margin-bottom: 18px;
@@ -39,7 +38,7 @@
 	}
 
 	&__btn {
-		@extend %dmsans-700;
+		@include DMSans(700);
 		font-size: 16px;
 		line-height: 1.2;
 		background-color: transparent;
@@ -70,7 +69,7 @@
 
 	&__content {
 		display: block;
-		@extend %dmsans-700;
+		@include DMSans(700);
 		line-height: 1.2;
 		position: absolute;
 		top: 36px;
@@ -82,6 +81,7 @@
 		max-width: 171px;
 		width: 100%;
 		font-size: 20px;
+		@include line-clamp(2);
 		color: $black-800;
 		margin-bottom: 12px;
 	}

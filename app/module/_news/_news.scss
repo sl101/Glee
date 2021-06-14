@@ -9,10 +9,7 @@
 	}
 
 	&__title {
-		@extend %dmsans-700;
-		font-size: 36px;
-		line-height: 1.2;
-		color: $black-800;
+		padding-right: 20px;
 	}
 
 	&__articles {
@@ -22,8 +19,9 @@
 	}
 
 	&__articles-link {
+		width: 61px;
 		display: block;
-		@extend %dmsans-700;
+		@include DMSans(700);
 		font-size: 16px;
 		line-height: 1.2;
 		color: $navy-500;
@@ -82,7 +80,7 @@
 		min-height: 30px;
 		border-radius: 15px;
 		background-color: $grey-400;
-		@extend %poppins-700;
+		@include Poppins(700);
 		font-size: 14px;
 		line-height: 1.4;
 		color: $white;
@@ -97,11 +95,11 @@
 
 	&__preview {
 		max-width: 285px;
-		@extend %dmsans-500;
+		@include DMSans(500);
 		font-size: 18px;
 		line-height: 1.2;
+		@include line-clamp(3, 1.2);
 		color: $navy-500;
-		@include lineclamp(60px, 3);
 		@include scaleHover(1.1, 0.5s);
 	}
 
@@ -116,13 +114,14 @@
 		padding: 0;
 		margin: 0;
 		border-top: 1px solid $grey-250;
-		@extend %rubik-500;
+		@include Rubik(500);
 		font-size: 12px;
 		line-height: 2.5;
 		text-transform: uppercase;
 	}
 
 	&__description {
+		max-width: 50%;
 		display: flex;
 		align-items: baseline;
 		@include scaleHover(1.1, 0.5s);
@@ -136,5 +135,10 @@
 		width: 14px;
 		height: 14px;
 		margin-right: 6px;
+	}
+
+	&__notice {
+		@include line-clamp();
+		padding-right: 5px;
 	}
 }

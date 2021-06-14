@@ -26,12 +26,6 @@
 	}
 }
 
-.logo {
-	@extend %logo;
-	position: relative;
-	z-index: 3;
-}
-
 .menu {
 	position: relative;
 	z-index: 3;
@@ -51,6 +45,8 @@
 	}
 
 	&__item {
+		max-width: 80px;
+		@include line-clamp();
 		&:not(:last-child) {
 			margin-right: 34px;
 		}
@@ -58,7 +54,7 @@
 
 	&__link {
 		display: block;
-		@extend %rubik-500;
+		@include Rubik(500);
 		font-size: 15px;
 		line-height: 1;
 		color: $navy-400;
@@ -153,6 +149,10 @@
 		top: 50%;
 		right: 156px;
 		transform: translate(0, -50%);
+	}
+
+	@include sm {
+		display: none;
 	}
 }
 
@@ -310,11 +310,5 @@
 		max-width: 100%;
 		justify-content: flex-end;
 		margin-top: 10px;
-	}
-}
-
-@media (max-width: $screen-xm) {
-	.user-nav {
-		display: none;
 	}
 }
