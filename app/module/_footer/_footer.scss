@@ -22,27 +22,38 @@
 			}
 		}
 
-		&__link {
+		&__contacts {
 			display: block;
 			@extend %rubik-400;
+			font-style: normal;
 			font-size: 14px;
 			line-height: 1.6;
 			color: $grey-600;
 			margin-bottom: 10px;
+
+			&--address {
+				max-width: 200px;
+			}
+		}
+
+		&__contacts-name {
+			display: inline-block;
+			text-transform: uppercase;
+		}
+
+		&__link {
+			display: block;
 			transition: color 0.5s;
 			@include scaleHover(1.1, 0.5s);
 
 			&--address {
-				max-width: 200px;
+				display: contents;
+				cursor: pointer;
 			}
 
 			&:hover {
 				color: $grey-800;
 			}
-		}
-
-		&__contacts-name {
-			text-transform: uppercase;
 		}
 
 		&__title {
@@ -109,7 +120,6 @@
 			max-width: 770px;
 			@extend %rubik-400;
 			@include lineclamp(45px, 2);
-			@include scaleHover(1.1, 0.5s);
 			font-size: 14px;
 			line-height: 1.5;
 			color: $grey-600;
