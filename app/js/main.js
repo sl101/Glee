@@ -11,9 +11,11 @@ $(function(){
 	$('.partners__content').slick({
 		dots: false,
 		arrows: false,
-		fade: true,
 		autoplay: true,
-		autoplaySpeed: 2500
+		autoplaySpeed: 2500,
+		infinite: true,
+		slidesToShow: 5,
+		slidesToScroll: 1
 	});
 
 	$('.menu__button').on('click', function(){
