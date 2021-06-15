@@ -205,6 +205,7 @@
 	}
 
 	&__subtitle {
+		display: block;
 		max-width: 200px;
 		@include DMSans(700);
 		@include line-clamp();
@@ -212,7 +213,7 @@
 		line-height: 1;
 		color: $grey-800;
 		margin-bottom: 8px;
-		@include scaleHover(1.1, 0.5s);
+		@include linkBehavior;
 	}
 
 	&__text {
