@@ -25,35 +25,6 @@
 	}
 }
 
-.filter {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-
-	&__unit {
-		&:not(:last-child) {
-			margin-right: 27px;
-		}
-	}
-
-	&__btn {
-		@include DMSans(700);
-		font-size: 16px;
-		line-height: 1.2;
-		background-color: transparent;
-		color: $grey-500;
-		transition: color 0.5s;
-		@include scaleHover(1.1, 0.5s);
-
-		&:focus,
-		&:hover,
-		&:active,
-		&.mixitup-control-active {
-			color: $black-800;
-		}
-	}
-}
-
 .card {
 	max-width: 270px;
 	width: 100%;
@@ -76,7 +47,8 @@
 
 		&:hover {
 			.card__icons-box {
-				z-index: 1;
+				opacity: 1;
+				visibility: visible;
 				bottom: 25px;
 			}
 		}
@@ -102,11 +74,12 @@
 		align-items: center;
 		margin: 0 auto;
 		position: absolute;
-		z-index: -1;
+		opacity: 0;
+		visibility: hidden;
 		left: 0;
 		right: 0;
 		bottom: -60px;
-		transition: bottom 0.8s, z-index 0.5s;
+		transition: bottom 0.8s, opacity 0.5s, visibility 0.5s;
 	}
 
 	&__icon-link {
@@ -144,27 +117,19 @@
 		flex-direction: column;
 		justify-content: space-between;
 		line-height: 2;
+		@include DMSans(700);
+		color: $grey-400;
 	}
 
 	&__title {
 		@include line-clamp(1);
 		@include DMSans(500);
 		color: $navy-600;
-		@include scaleHover(1.1, 0.5s);
-
-		&:hover {
-			color: $grey-800;
-		}
+		@include linkBehavior(0.5s, 1.1, $grey-800);
 	}
 
 	&__curency {
-		@include DMSans(700);
 		@include line-clamp(1);
-	}
-
-	&__price {
-		@include DMSans(700);
-		color: $grey-400;
 	}
 }
 
@@ -238,7 +203,7 @@
 		line-height: 1.2;
 		@include line-clamp();
 		color: $navy-600;
-		@include scaleHover(1.1, 0.5s);
+		@include linkBehavior;
 	}
 
 	&__text {

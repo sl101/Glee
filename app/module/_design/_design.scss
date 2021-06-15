@@ -26,35 +26,6 @@
 	}
 }
 
-.filter {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-
-	&__unit {
-		&:not(:last-child) {
-			margin-right: 27px;
-		}
-	}
-
-	&__btn {
-		@include DMSans(700);
-		font-size: 16px;
-		line-height: 1.2;
-		background-color: transparent;
-		color: $grey-500;
-		transition: color 0.5s;
-		@include scaleHover(1.1, 0.5s);
-
-		&:focus,
-		&:hover,
-		&:active,
-		&.mixitup-control-active {
-			color: $black-800;
-		}
-	}
-}
-
 .design-card {
 	position: relative;
 
@@ -71,6 +42,7 @@
 		display: block;
 		@include DMSans(700);
 		line-height: 1.2;
+		color: $grey-400;
 		position: absolute;
 		top: 36px;
 		left: 35px;
@@ -84,10 +56,5 @@
 		@include line-clamp(2);
 		color: $black-800;
 		margin-bottom: 12px;
-	}
-
-	&__type {
-		font-size: 16px;
-		color: $grey-400;
 	}
 }

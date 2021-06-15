@@ -48,7 +48,7 @@ body {
 	min-height: 39px;
 	position: relative;
 	z-index: 3;
-	@include scaleHover(1.1, 0.5s);
+	@include linkBehavior;
 }
 
 .btn-arrow {
@@ -90,5 +90,33 @@ body {
 	@include DMSans(700);
 	font-size: 36px;
 	line-height: 1.2;
+	color: $black-800;
+}
+
+.filter {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	&__unit {
+		&:not(:last-child) {
+			margin-right: 27px;
+		}
+	}
+
+	&__btn {
+		max-width: 80px;
+		@include DMSans(700);
+		font-size: 16px;
+		line-height: 1.2;
+		@include line-clamp();
+		background-color: transparent;
+		color: $grey-500;
+		transition: color 0.5s;
+		@include linkBehavior;
+	}
+}
+
+.mixitup-control-active {
 	color: $black-800;
 }

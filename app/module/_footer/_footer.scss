@@ -10,6 +10,10 @@
 	&__item {
 		max-width: 270px;
 		width: 100%;
+		@include Rubik(400);
+		font-size: 14px;
+		line-height: 1.6;
+		color: $grey-600;
 
 		&:not(:last-child) {
 			margin-right: 30px;
@@ -18,11 +22,7 @@
 
 	&__contacts {
 		display: block;
-		@include Rubik(400);
 		font-style: normal;
-		font-size: 14px;
-		line-height: 1.6;
-		color: $grey-600;
 		margin-bottom: 10px;
 
 		&--address {
@@ -39,15 +39,11 @@
 		display: inline-block;
 		transition: color 0.5s;
 		@include line-clamp(2);
-		@include scaleHover(1.1, 0.5s);
+		@include linkBehavior;
 
 		&--address {
 			display: contents;
 			cursor: pointer;
-		}
-
-		&:hover {
-			color: $grey-800;
 		}
 	}
 
@@ -62,12 +58,8 @@
 
 	&__text {
 		max-width: 235px;
-		margin-bottom: 35px;
-		@include Rubik(400);
-		font-size: 14px;
-		line-height: 1.6;
 		@include line-clamp(2, 1.6);
-		color: $grey-600;
+		margin-bottom: 35px;
 	}
 
 	&__form {
@@ -85,12 +77,6 @@
 		color: $navy-400;
 		background-color: $pink-550;
 		border: none;
-
-		&::placeholder {
-			@include DMSans(400);
-			font-size: 12px;
-			color: $navy-400;
-		}
 	}
 
 	&__button {
@@ -116,12 +102,12 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
+	@include Rubik(400);
+	font-size: 14px;
 	padding-top: 30px;
 
 	&__copy {
 		max-width: 770px;
-		@include Rubik(400);
-		font-size: 14px;
 		line-height: 1.5;
 		@include line-clamp(1, 1.5);
 		color: $grey-600;
@@ -146,16 +132,10 @@
 
 	&__link {
 		display: inline-block;
-		@include Rubik(400);
-		font-size: 14px;
 		line-height: 2.3;
 		@include line-clamp(1, 2.3);
 		color: $grey-600;
 		transition: color 0.5s;
-		@include scaleHover(1.1, 0.5s);
-
-		&:hover {
-			color: $grey-800;
-		}
+		@include linkBehavior;
 	}
 }

@@ -81,17 +81,3 @@ $screen-xl: 1200px;
 		border-color: $navy-400;
 	}
 }
-
-%linkBehavior {
-	&:hover {
-		@include colorScaleHover(1.1, $navy-600, 0.5s);
-	}
-
-	&:focus {
-		color: $navy-600;
-	}
-
-	&:active {
-		color: $black-800;
-	}
-}

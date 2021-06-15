@@ -45,8 +45,6 @@
 	}
 
 	&__item {
-		max-width: 80px;
-		@include line-clamp();
 		&:not(:last-child) {
 			margin-right: 34px;
 		}
@@ -58,7 +56,7 @@
 		font-size: 15px;
 		line-height: 1;
 		color: $navy-400;
-		@extend %linkBehavior;
+		@include linkBehavior;
 
 		&--active {
 			color: $black-800;
