@@ -21,30 +21,27 @@
 	}
 
 	&__contacts {
-		display: block;
 		font-style: normal;
 		margin-bottom: 10px;
-
-		&--address {
-			max-width: 200px;
-		}
 	}
 
 	&__contacts-name {
-		display: inline-block;
+		display: block;
+		max-width: 200px;
 		text-transform: uppercase;
+	}
+
+	&__value {
+		cursor: pointer;
+		text-transform: none;
+		@include linkBehavior(0.5, 1);
 	}
 
 	&__link {
 		display: inline-block;
 		transition: color 0.5s;
-		@include line-clamp(2);
+		@include line-clamp;
 		@include linkBehavior;
-
-		&--address {
-			display: contents;
-			cursor: pointer;
-		}
 	}
 
 	&__title {
@@ -64,7 +61,7 @@
 
 	&__form {
 		display: flex;
-		height: 38px;
+		min-height: 38px;
 	}
 
 	&__input {
@@ -73,10 +70,13 @@
 		padding: 0 15px;
 		@include DMSans(400);
 		font-size: 12px;
-		@include line-clamp();
-		color: $navy-400;
+		color: $blue-700;
 		background-color: $pink-550;
 		border: none;
+
+		&::placeholder {
+			color: $navy-400;
+		}
 	}
 
 	&__button {
@@ -95,6 +95,7 @@
 
 .logo--footer {
 	top: -15px;
+	// transform: translateY(-15px);  // при ховере будет давать эффект  смещения на первоначальную позицию
 	margin-bottom: 10px;
 }
 

@@ -1,11 +1,9 @@
 .partners {
 	background-color: $pink-550;
-	// margin-top: -170px;
 
 	&__content {
 		display: flex;
 		padding: 95px 0 65px;
-		// padding: 265px 0 65px;
 	}
 
 	&__item {
@@ -22,6 +20,7 @@
 
 	&__img {
 		margin: auto;
+		object-fit: cover;
 		filter: brightness(80%);
 		filter: contrast(30%);
 

@@ -91,7 +91,7 @@
 	}
 }
 
-@mixin linkBehavior($time: 0.5s, $scale: 1.1, $color: &navy-600) {
+@mixin linkBehavior($time: 0.5s, $scale: 1.1, $color: $navy-600) {
 	@media (min-width: $screen-md) {
 		transition: transform $time, color $time;
 		&:hover {

@@ -33,12 +33,16 @@
 		display: block;
 		max-width: 370px;
 		width: 100%;
-		min-height: 246px;
+		height: 246px;
+		// min-height: 246px;
+		background-position: top center;
 		object-fit: cover;
 		@include scaleHover(1.1, 0.5s);
 	}
 
 	&__content {
+		max-width: 171px;
+		width: 100%;
 		display: block;
 		@include DMSans(700);
 		line-height: 1.2;
@@ -50,11 +54,14 @@
 
 	&__title-link {
 		display: block;
-		max-width: 171px;
-		width: 100%;
 		font-size: 20px;
 		@include line-clamp(2);
 		color: $black-800;
 		margin-bottom: 12px;
+	}
+
+	&__type {
+		display: block;
+		@include line-clamp;
 	}
 }

@@ -60,7 +60,8 @@
 	&__img {
 		max-width: 640px;
 		width: 100%;
-		min-height: 264px;
+		height: 264px;
+		// min-height: 264px;
 		object-fit: cover;
 		position: relative;
 		z-index: 1;
