@@ -2,6 +2,10 @@
 	padding-top: 60px;
 	position: relative;
 
+	@include xl {
+		padding-top: 20px;
+	}
+
 	&::after {
 		content: "";
 		position: absolute;
@@ -11,6 +15,10 @@
 		right: 0;
 		bottom: 0;
 		background-color: $pink-550;
+
+		@include xl {
+			top: 360px;
+		}
 	}
 
 	&__top {
@@ -49,6 +57,10 @@
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+
+		@include xl {
+			justify-content: space-around;
+		}
 	}
 
 	&__item {
@@ -59,6 +71,12 @@
 		background-color: $white;
 		overflow: hidden; // это чтоб картинка при увеличении на ховере не вылазила за края
 		box-shadow: 0 6px 47px 3px $navy-550;
+
+		@include xl {
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
 	}
 
 	&__imglink {
@@ -129,6 +147,10 @@
 		font-size: 12px;
 		line-height: 2.5;
 		text-transform: uppercase;
+
+		@include sm {
+			display: block;
+		}
 	}
 
 	&__description {
@@ -136,6 +158,10 @@
 		display: flex;
 		justify-content: start;
 		align-items: baseline;
+
+		@include sm {
+			max-width: 100%;
+		}
 
 		&::before {
 			content: "";
@@ -154,6 +180,10 @@
 				content: "";
 				background: url("../images/sprite.svg#calendar");
 				background-repeat: no-repeat;
+			}
+
+			@include sm {
+				margin-right: 0;
 			}
 		}
 	}
