@@ -69,7 +69,11 @@
 	}
 
 	&__content {
-		margin-right: 0;
+		padding-right: 93px;
+
+		@include xl {
+			padding-right: 0px;
+		}
 
 		@include md {
 			margin-bottom: 80px;
