@@ -1,4 +1,4 @@
-@import 'mixin';
+@import "mixin";
 
 $black-800: #1a1a1a;
 $black-700: #191919;
@@ -24,98 +24,44 @@ $pink-350: rgba(254, 239, 226, 0.4);
 $pink-200: #fff7f0;
 $white: #ffffff;
 
+$screen-sm: 480px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
 
-%myriadpro-400{
-	font-family: 'MyriadPro', sans-serif; 
+%myriadpro-400 {
+	font-family: "MyriadPro", sans-serif;
 	font-weight: 400;
 }
 
-%rubik-500{
-	font-family: 'Rubik', sans-serif;
+%rubik-500 {
+	font-family: "Rubik", sans-serif;
 	font-weight: 500;
 }
 
-%rubik-400{
-	font-family: 'Rubik', sans-serif;
+%rubik-400 {
+	font-family: "Rubik", sans-serif;
 	font-weight: 400;
 }
 
-%poppins-700{
-	font-family: 'Poppins', sans-serif;
+%poppins-700 {
+	font-family: "Poppins", sans-serif;
 	font-weight: 700;
 }
 
-%dmsans-700{
-	font-family: 'DMSans', sans-serif;
+%dmsans-700 {
+	font-family: "DMSans", sans-serif;
 	font-weight: 700;
 }
 
-%dmsans-500{
-	font-family: 'DMSans', sans-serif;
+%dmsans-500 {
+	font-family: "DMSans", sans-serif;
 	font-weight: 500;
 }
 
-%dmsans-400{
-	font-family: 'DMSans', sans-serif;
+%dmsans-400 {
+	font-family: "DMSans", sans-serif;
 	font-weight: 400;
-}
-
-%logo {
-	display: block;
-	max-width: 170px;
-	min-height: 39px;
-	@include scalehover(1.1, 0.5s);
-}
-
-%title {
-	@extend %dmsans-700;
-	font-size: 36px;
-	line-height: 1.2;
-	color: $black-700;
-}
-
-%btn {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	max-width: 200px;
-	width: 100%;
-	@extend %rubik-500;
-	font-size: 15px;
-	line-height: 1;
-	text-decoration: none;
-	outline: transparent;
-	color: $navy-400;
-	background-color: $grey-200;
-	padding: 25px 19px 21px 27px;
-	transition: color 0.8s, background-color 0.8s;
-}
-
-%btn:hover {
-	color: $white;
-	background-color: $grey-400;
-}
-
-%btn-arrow {
-	max-width: 22px;
-	width: 100%;
-	height: 9px;
-	fill: $navy-400;
-	transition: fill 0.8s;
-}
-
-%btn:hover %btn-arrow {
-	fill: $white;
-}
-
-%linkhover {
-	transition: background-color 0.5s, color 05s, border-color 0.5s;
-
-	&:hover {
-		background-color: $pink-550;
-		color: $navy-400;
-		border-color: $navy-400;
-	}
 }
 
 @function max($numbers...) {
@@ -123,4 +69,14 @@ $white: #ffffff;
 }
 @function min($numbers...) {
 	@return m#{i}n(#{$numbers});
+}
+
+%formButtonHover {
+	transition: background-color 0.5s, color 05s, border-color 0.5s;
+
+	&:hover {
+		background-color: $pink-550;
+		color: $navy-400;
+		border-color: $navy-400;
+	}
 }

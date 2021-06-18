@@ -1,0 +1,15 @@
+@import 'reset';
+@import 'fonts';
+@import 'vars';
+@import 'mixin';
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox';
+@import 'global';
+@import '../module/_header/_header';
+@import '../module/_footer/_footer';
+@import '../module/_top-slider/_top-slider';
+@import '../module/_gallery/_gallery';
+@import '../module/_design/_design';
+@import '../module/_video/_video';
+@import '../module/_news/_news';
+@import '../module/_partners/_partners';

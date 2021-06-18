@@ -1,0 +1,306 @@
+.top-slider {
+	margin-top: 145px;
+	&__wrapper {
+		background-color: $pink-500;
+		padding: 0 5px;
+	}
+
+	&__inner {
+		padding-top: 99px;
+
+		@include md {
+			padding-top: 20px;
+		}
+	}
+
+	&__item {
+		&::after {
+			content: "";
+			max-width: 622px;
+			width: 100%;
+			min-height: 634px;
+			background-color: $white;
+			border-radius: 100%;
+			background: linear-gradient(-90deg, $white 0%, rgba(255, 255, 255, 0) 100%);
+			position: absolute;
+			top: 0;
+			right: 10%;
+
+			@include xl {
+				max-width: 300px;
+				min-height: 83%;
+				top: 50px;
+				right: 50px;
+			}
+
+			@include md {
+				max-width: 300px;
+				min-height: 46%;
+				top: auto;
+				bottom: 15px;
+				right: 15px;
+			}
+
+			@include sm {
+				max-width: 200px;
+				min-height: 30%;
+				bottom: 115px;
+			}
+		}
+	}
+
+	&__box {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		padding: 116px 0 206px;
+		position: relative;
+		z-index: 1;
+
+		@include xl {
+			padding: 40px 0 60px 20px;
+		}
+
+		@include md {
+			flex-wrap: wrap;
+			padding-bottom: 0;
+			padding-left: 0;
+		}
+	}
+
+	&__content {
+		padding-right: 93px;
+
+		@include xl {
+			padding-right: 0px;
+		}
+
+		@include md {
+			margin-bottom: 80px;
+		}
+	}
+
+	&__title {
+		max-width: 411px;
+		width: 100%;
+		@include Rubik(500);
+		font-size: 72px;
+		line-height: 1;
+		text-transform: uppercase;
+		color: $navy-600;
+		@include line-clamp(2, 1);
+		margin-bottom: 25px;
+		@include scaleHover(1.1, 0.5s);
+
+		@include xl {
+			font-size: 52px;
+		}
+	}
+
+	&__text {
+		max-width: 359px;
+		@include Rubik(400);
+		font-size: 18px;
+		line-height: 1.6;
+		color: $navy-400;
+		margin-bottom: 40px;
+		@include line-clamp(2, 1.6);
+	}
+
+	&__img-wrapper {
+		max-width: 640px;
+		width: 100%;
+		min-height: 264px;
+
+		@include xl {
+			max-width: 50%;
+			min-height: auto;
+		}
+
+		@include md {
+			max-width: 80%;
+			margin: 0 auto;
+			min-height: 264px;
+		}
+	}
+
+	&__img {
+		object-fit: contain;
+
+		@include xl {
+			width: 100%;
+			margin: auto;
+			margin-bottom: 0;
+		}
+
+		@include md {
+		}
+	}
+}
+
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 42px;
+
+	li {
+		button {
+			width: 30px;
+			height: 29px;
+			border: none;
+			border-radius: 50%;
+			background-color: $pink-400;
+			@include Rubik(500);
+			font-size: 11px;
+			line-height: 1;
+			color: $navy-400;
+			padding: 0;
+			transition: color 0.5s, background-color 0.5s;
+
+			&:hover {
+				background-color: $white;
+			}
+		}
+
+		&.slick-active {
+			button {
+				color: $navy-600;
+				background-color: $white;
+				background-color: $white;
+			}
+		}
+
+		&:not(:last-child) {
+			margin-right: 11px;
+		}
+	}
+}
+
+.advantages {
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		background-color: $pink-200;
+	}
+
+	&__item {
+		min-height: 171px;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-basis: 33.3%;
+		padding: 34px 10px 0;
+
+		@include md {
+			flex-basis: 100%;
+			margin-left: 10px;
+		}
+
+		&:not(:last-child) {
+			border-right: 1px solid $grey-300;
+			@include xl {
+				border-right: 0px;
+			}
+		}
+
+		&--delivery {
+			padding-top: 57px;
+		}
+	}
+
+	&__content {
+		position: relative;
+
+		&::before {
+			width: 100%;
+			position: absolute;
+			opacity: 0.2;
+		}
+
+		&::after {
+			content: "";
+			max-width: 20px;
+			width: 100%;
+			min-height: 21px;
+			border-radius: 50%;
+			position: absolute;
+			background-color: $grey-450;
+		}
+
+		&--support {
+			padding-left: 65px;
+			padding-top: 15px;
+
+			&::before {
+				content: url("../images/sprite.svg#support");
+				max-width: 53px;
+				min-height: 52px;
+				top: 15px;
+				left: -12px;
+			}
+
+			&::after {
+				top: 48px;
+				left: 20px;
+			}
+		}
+
+		&--delivery {
+			padding-left: 58px;
+
+			&::before {
+				content: url("../images/sprite.svg#delivery");
+				max-width: 53px;
+				min-height: 52px;
+				top: -9px;
+				left: -25px;
+			}
+
+			&::after {
+				top: 17px;
+				left: 13px;
+			}
+		}
+
+		&--payment {
+			max-width: 310px;
+			padding-left: 90px;
+			padding-top: 12px;
+
+			&::before {
+				content: url("../images/sprite.svg#payment");
+				max-width: 53px;
+				min-height: 52px;
+				top: 9px;
+				left: 0;
+			}
+
+			&::after {
+				top: 46px;
+				left: 38px;
+			}
+		}
+	}
+
+	&__subtitle {
+		display: block;
+		max-width: 200px;
+		@include DMSans(700);
+		@include line-clamp();
+		font-size: 18px;
+		line-height: 1;
+		color: $grey-800;
+		margin-bottom: 8px;
+		@include linkBehavior;
+	}
+
+	&__text {
+		color: $grey-700;
+		@include line-clamp(3);
+
+		&--support {
+			max-width: 209px;
+		}
+	}
+}
