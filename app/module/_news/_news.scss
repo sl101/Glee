@@ -73,9 +73,7 @@
 		box-shadow: 0 6px 47px 3px $navy-550;
 
 		@include xl {
-			&:not(:last-child) {
-				margin-bottom: 30px;
-			}
+			margin-bottom: 30px;
 		}
 	}
 

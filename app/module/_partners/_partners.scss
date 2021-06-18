@@ -4,6 +4,10 @@
 	&__content {
 		display: flex;
 		padding: 95px 0 65px;
+
+		@include xl {
+			padding: 40px 0 60px;
+		}
 	}
 
 	&__item {
@@ -26,6 +30,18 @@
 
 		&--peterson {
 			filter: opacity(60%);
+		}
+	}
+
+	.slick-track {
+		@include xl {
+			left: 70px;
+		}
+		@include md {
+			left: 20px;
+		}
+		@include sm {
+			left: 27%;
 		}
 	}
 }

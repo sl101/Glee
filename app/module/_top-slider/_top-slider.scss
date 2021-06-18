@@ -95,10 +95,6 @@
 		@include xl {
 			font-size: 52px;
 		}
-		@include md {
-			// max-width: 200px;
-			// font-size: 32px;
-		}
 	}
 
 	&__text {
@@ -109,13 +105,6 @@
 		color: $navy-400;
 		margin-bottom: 40px;
 		@include line-clamp(2, 1.6);
-
-		@include md {
-			// max-width: 300px;
-			// font-size: 14px;
-			// line-height: 1;
-			// @include line-clamp(3, 1.6);
-		}
 	}
 
 	&__img-wrapper {

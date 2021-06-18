@@ -4,18 +4,42 @@ $(function(){
 		dots: true,
 		arrows: false,
 		fade: true,
-		// autoplay: true,
-		// autoplaySpeed: 2500
+		autoplay: true,
+		autoplaySpeed: 2500
 	});
 
 	$('.partners__content').slick({
 		dots: false,
 		arrows: false,
-		autoplay: true,
-		autoplaySpeed: 2500,
+		// autoplay: true,
+		// autoplaySpeed: 2500,
 		infinite: true,
 		slidesToShow: 5,
-		slidesToScroll: 1
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					infinite: true,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
 	});
 
 	$('.menu__button').on('click', function(){
